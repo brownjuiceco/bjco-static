@@ -2,6 +2,6 @@
   --text-primary:black;
   --highlight:#FF5015;
 
-  --container-max:1200px;
+  --container-max:1100px;
   --container-max-buffer:calc(var(--container-max) + 100px);
 }

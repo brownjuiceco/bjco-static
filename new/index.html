@@ -13,31 +13,140 @@
   <script type="module" src="components/subnav.js"></script>
   <script type="module" src="components/aArrow.js"></script>
   <style type="text/css">
-    #ds-experts .animation-container {
-      position:relative;
-      margin-right:-30px;
-    }
-    #ds-experts .animation-container img {
-      transform:rotate(-90deg);
-      position:absolute;
-      right:0;
-      bottom:-170px;
-      max-width:40vw;
+    #ds-experts {position:relative;}
+    #ds-experts::before {
+      content:'';
+      background-image:url('images/below-header-wedge.svg');
+      background-size:contain;
+      background-repeat:no-repeat;
+
       display:block;
+      position:absolute;
+      inset:0;
+      z-index:-1;
     }
 
+    #ds-experts em {font-weight:bold;font-style:normal;}
+    #ds-experts em {font-weight:bold;font-style:normal;}
+    #ds-experts .flex-row {
+      flex-direction:column;
+      gap:20px;
+    }
+    #ds-experts .anim-container {
+      position:relative;
+      margin-top:-85px;
+      margin-right:-20px;
+      text-align:right;
+      transform:scale(0.9);
+    }
+    #ds-experts .anim-container img {
+      display:block;
+      margin-left:auto;
+      width:calc(100% - 280px);
+    }
+    #ds-experts .anim-container img.positioned {
+      position:absolute;
+      top:0;
+      right:0;
+    }
+    #ds-experts .anim-container img.anim {
+      position:absolute;
+      mix-blend-mode:multiply;
+      width:calc(100vw - 430px);
+      right:7.2vw;
+      top:10px;
+      z-index:0;
+      transform:scale(.9);
+    }
+    #ds-experts .description {
+      background:linear-gradient(rgba(255,255,255,0) 120px, rgba(255,255,255,1) 240px);
+      margin-top:-90px;
+      margin-right:auto;
+      padding-bottom:200px;
+
+      position:relative;
+    }
     /* desktop */
-    @media (min-width:1024px) {
-      #ds-experts .animation-container {
-        position:relative;
+    @media (min-width:800px) {
+      #ds-experts .flex-row {
+        flex-direction:row-reverse;
+        gap:10px;
       }
-      #ds-experts .animation-container img {
-        transform:unset;
-        position:absolute;
-        right:0;
-        bottom:-170px;
-        max-width:40vw;
+      #ds-experts .anim-container {
         display:block;
+        padding:0;
+      }
+      #ds-experts .anim-container img {max-width:45vw;width:auto;}
+      #ds-experts .anim-container img.anim {
+        max-width:32vw;
+        width:inherit;
+      }
+      #ds-experts .description {
+        margin-top:0;
+        max-width:500px;
+        padding-bottom:0;
+        background:none;
+      }
+    }
+    @media (min-width:900px) {
+      #ds-experts .flex-row {gap:20px;}
+      #ds-experts .anim-container {margin-top:-12vw;}
+    }
+    @media (min-width:1100px) {
+      #ds-experts .anim-container {margin-top:max(-20vw, -260px);}
+      #ds-experts .anim-container img {max-width:500px;width:auto;}
+      #ds-experts .anim-container img.anim {
+        max-width:350px;
+        width:inherit;
+        right:80px;
+      }
+    }
+
+    #good-company {
+      background-color:white;
+      position:relative;
+      z-index:1;
+    }
+    #good-company .image-container {
+      float:right;
+      max-width:50vw;
+      padding:0 0 50px 5vw;
+      margin-top:-80px;
+      shape-outside:circle(45%) border-box;
+      shape-margin:2rem;
+    }
+    #good-company .image-container img {
+      display:block;
+      max-width:min(40vw, 500px);
+      margin-left:auto;
+    }
+    #good-company .description {
+      background:white;
+      max-width:650px;
+      margin-right:auto;
+      padding-bottom:60px;
+    }
+    #good-company .description h3 {margin-top:0;}
+    @media (min-width:800px) {
+      #good-company {
+        background:linear-gradient(rgba(255,255,255,0) 0px, rgba(255,255,255,1) 100px);
+        padding-top:200px;
+      }
+    }
+    @media (min-width:1000px) {
+      #good-company > div {
+        display:flex;
+        flex-flow:row-reverse;
+      }
+      #good-company .image-container {
+        width:50vw;
+        padding-left:3vw;
+        float:none;
+      }
+    }
+    @media (min-width:1000px) {
+      #good-company .image-container {
+        padding-left:0;
       }
     }
   </style>
@@ -51,7 +160,7 @@
     <div id="content">
       <img class="headline-img" src="images/logo-header.png" alt="Brown Juice Co" />
       <h2 class="body-font">Legendary <b>Design and Marketing</b> from Tokyo</h2>
-      <div>
+      <div class="buttons">
         <a class="button" href="contact.html">Meet Us</a>
         <a class="button" href="portfolio.html">Portfolio</a>
       </div>
@@ -60,21 +169,40 @@
 
   <section id="ds-experts" class="contain">
     <div class="flex-row">
-      <div id="graphic">
-        <img src="images/ipad.png" alt="an animation showing the logos of tools and technologies flowing slowly down the page in an endless loop" />
+      <div class="anim-container">
+        <img src="images/ipad-back.png" class="static" alt="" />
+        <img src="images/header-icons.png" class="anim" alt="an animation showing the logos of tools and technologies flowing slowly down the page in an endless loop" />
+        <img src="images/ipad-front.png" class="positioned" alt="" />
         <!-- flowing icons -->
       </div>
       <div class="description">
         <h3>Design System Experts</h3>
         <p>Our team has worked on Web Apps, Mobile Apps, Design Systems, and Component Libraries for industry leaders and <strong>for over 20 years.</strong></p>
-        <p>Haven&#8217;t heard about Design Systems?
-          <br/><srong class="highlight">No worries!</srong> Our friendly team is here to help you every step of the way.</p>
+        <p><em>Haven&#8217;t heard about Design Systems?</em></p>
+        <p><strong class="highlight">No worries!</strong> Our friendly team is here to help you every step of the way.</p>
         <div class="links">
           <a-arrow url="contact.html" text="Get Started"></a-arrow>
           <a-arrow url="process.html" text="Read about our process"></a-arrow>
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="good-company" class="contain">
+     <div>
+      <div class="image-container float-right">
+        <img src="images/experience-logos.png" alt="the logos of many major companies, including: Apple, Google, Microsoft, Amazon, Toyota, Adobe, and Bluetooth" />
+      </div>
+      <div class="description">
+        <h3>You&#8217;re In Good Company</h3>
+        <p>Our team has helped bring products to life working for many of the world&#8217;s most influential and successful companies.</p>
+        <p>With your dream and our expertise, we can make unforgettable experiences for your customers, too.</p>
+        <div class="links">
+          <a-arrow url="about.html" text="See our work"></a-arrow>
+          <a-arrow url="process.html" text="Read about our process"></a-arrow>
+        </div>
+      </div>
+     </div>
   </section>
 
 

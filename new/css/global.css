@@ -58,3 +58,8 @@ a.trailing-arrow::after {
   padding-right:8px;
   transition:all ease 70ms;
 }
+
+.flex-row {
+  display:flex;
+  flex-flow:row;
+}
