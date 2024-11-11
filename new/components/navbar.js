@@ -1,69 +1,86 @@
-class navBar extends HTMLElement {
+import './subnav.js';
+
+class NavBar extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
     this.render();
+    this.checkUrlHash();
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
-      <style>
-        #logo {max-height:1rem;}
-        #middle > * {display:inline-block;}
-        #middle i {margin:0 3vw;}
-        #right {
-          display:inline-flex;
-          align-content:middle;
-        }
-        .toggle {
-          background:white;
-          border:1px solid black;
-          border-radius:6px;
-          display:inline-flex;
-          align-content:middle;
-        }
-        .toggle .active {
-          background:black;
-          border-radius:4px;
-          color:white;
-        }
-      </style>
+    this.innerHTML = `
       <div id="left">
         <a href="https://brownjuice.co">
-          <img id="logo" src="images/logo.png" alt="Brown Juice Co" />
+          <img id="logo" src="images/logo-inline.svg" alt="Brown Juice Co" />
         </a>
       </div>
 
-      <div id="middle">
-        <a href="/team.html">Team</a>
-          <i class="fa-solid fa-circle"></i>
-        <a href="/process.html">Process</a>
-          <i class="fa-solid fa-circle"></i>
-        <a href="/company.html">Company</a>
-      </div>
-      
+      <sub-nav></sub-nav>
+
       <div id="right">
-        <i class="fa-regular fa-globe"></i>
+        <!-- <i class="fa-regular fa-globe"></i> -->
         <div class="toggle">
-          <a name="english" class="active">English</a>
-          <a name="japanese">日本語</a>
+          <a data-lang="english" class="active">English</a>
+          <a data-lang="japanese">日本語</a>
         </div>
       </div>
     `;
-
-    const contactList = this.shadowRoot.querySelector('toggle');
-    contactList.addEventListener('language-changed', (event) => {
-      this.changeLanguage(event.detail.name);
-    });
-
+    this.bindEvents();
   }
 
-  changeLanguage(newLanguage) {
-    // change language
-    // ...
-    // ...
-    this.render();
+  checkUrlHash() {
+    // Remove the # from the hash and get the value
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      // Find the matching language option
+      const matchingOption = this.querySelector(`[data-lang="${hash}"]`);
+      if (matchingOption) {
+        // Simulate a click on the matching option
+        matchingOption.click();
+      }
+    }
+  }
+
+  bindEvents() {
+    const languageOptions = this.querySelectorAll('.toggle a');
+
+    languageOptions.forEach(option => {
+      option.addEventListener('click', (event) => {
+        event.preventDefault();
+        const target = event.target;
+        const newLanguage = target.getAttribute('data-lang');
+        this.changeLanguage(target, newLanguage);
+
+        // Update URL hash without triggering a page reload
+        history.pushState(null, '', `#${newLanguage}`);
+      });
+    });
+
+    // Listen for hash changes to handle browser back/forward
+    window.addEventListener('hashchange', () => {
+      this.checkUrlHash();
+    });
+  }
+
+  changeLanguage(clickedElement, newLanguage) {
+    if (clickedElement.classList.contains('active')) {
+      return;
+    }
+
+    // Remove active class from all language options
+    const languageOptions = this.querySelectorAll('.toggle a');
+    languageOptions.forEach(option => option.classList.remove('active'));
+
+    // Add active class to clicked element
+    clickedElement.classList.add('active');
+
+    // Emit a custom event for language change
+    const event = new CustomEvent('languageChanged', {
+      detail: { language: newLanguage },
+      bubbles: true
+    });
+    this.dispatchEvent(event);
   }
 }
 
-customElements.define('nav-bar', navBar);
+customElements.define('nav-bar', NavBar);

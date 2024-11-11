@@ -4,26 +4,93 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brown Juice Co</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="css/global.css">
+
+  <script src="jquery.js"></script>
+  <script src="https://kit.fontawesome.com/f413eee953.js" crossorigin="anonymous"></script>
   <script type="module" src="components/navbar.js"></script>
+  <script type="module" src="components/subnav.js"></script>
+  <script type="module" src="components/aArrow.js"></script>
+  <style type="text/css">
+    #ds-experts .animation-container {
+      position:relative;
+      margin-right:-30px;
+    }
+    #ds-experts .animation-container img {
+      transform:rotate(-90deg);
+      position:absolute;
+      right:0;
+      bottom:-170px;
+      max-width:40vw;
+      display:block;
+    }
+
+    /* desktop */
+    @media (min-width:1024px) {
+      #ds-experts .animation-container {
+        position:relative;
+      }
+      #ds-experts .animation-container img {
+        transform:unset;
+        position:absolute;
+        right:0;
+        bottom:-170px;
+        max-width:40vw;
+        display:block;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <nav-bar>
-  </nav-bar>
-  <header>
-    <h1>Brown Juice Co</h1>
-    <p>Tokyo, Japan</p>
+  <global-styles></global-styles>
+  <header class="contain">
+    <nav-bar></nav-bar>
+    <sub-nav></sub-nav>
+    <div id="content">
+      <img class="headline-img" src="images/logo-header.png" alt="Brown Juice Co" />
+      <h2 class="body-font">Legendary <b>Design and Marketing</b> from Tokyo</h2>
+      <div>
+        <a class="button" href="contact.html">Meet Us</a>
+        <a class="button" href="portfolio.html">Portfolio</a>
+      </div>
+    </div>
   </header>
 
+  <section id="ds-experts" class="contain">
+    <div class="flex-row">
+      <div id="graphic">
+        <img src="images/ipad.png" alt="an animation showing the logos of tools and technologies flowing slowly down the page in an endless loop" />
+        <!-- flowing icons -->
+      </div>
+      <div class="description">
+        <h3>Design System Experts</h3>
+        <p>Our team has worked on Web Apps, Mobile Apps, Design Systems, and Component Libraries for industry leaders and <strong>for over 20 years.</strong></p>
+        <p>Haven&#8217;t heard about Design Systems?
+          <br/><srong class="highlight">No worries!</srong> Our friendly team is here to help you every step of the way.</p>
+        <div class="links">
+          <a-arrow url="contact.html" text="Get Started"></a-arrow>
+          <a-arrow url="process.html" text="Read about our process"></a-arrow>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
-
-  <footer>
+  <footer class="contain">
     <p>
       <img class="emoji-img" src="wave-emoji.png" alt="">
       <a href="mailto:brimwd+juice@gmail.com" target="_blank">hello@brownjuice.co</a>
     </p>
   </footer>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.headline-img').addClass('shadow');
+  });
+</script>
 </body>
 </html>
