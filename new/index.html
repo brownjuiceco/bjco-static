@@ -14,8 +14,9 @@
   <script type="module" src="components/subnav.js"></script>
   <script type="module" src="components/aArrow.js"></script>
   <script type="module" src="components/emoji.js"></script>
-  <style type="text/css">
+  <script src="home.js"></script>
 
+  <style type="text/css">
   </style>
 </head>
 
@@ -98,7 +99,7 @@
     </div>
   </section>
 
-  <section id="holistic-approach" class="contain">
+  <section id="holistic-approach" class="contain animated">
     <div class="flex-col-row">
       <div class="image-container">
         <picture class="overlaid">
@@ -106,12 +107,15 @@
           <img src="images/holistic-browser.png" alt="an illustration of a beautiful app and the corresponding programming-code" />
         </picture>
         <picture>
-          <source srcset="images/holistic-code-dark.png" media="(prefers-color-scheme:dark)" />
-          <img src="images/holistic-code-light.png" alt="" />
+          <!-- <source srcset="images/holistic-code-dark.png" media="(prefers-color-scheme:dark)" /> -->
+          <img src="images/holistic-code-dark.png" alt="" />
         </picture>
       </div>
       <div class="description">
-        <h3>Holistic Approach;<br/>Attention-to-Detail<emoji-img data-emoji="monocle"></emoji-img></h3>
+        <h3>
+          <span class="i-block">Holistic Approach;</span>
+          <span class="i-block">Attention-to-Detail<emoji-img data-emoji="monocle"></emoji-img></span>
+        </h3>
         <p>We&#8217;re experts across the complete product-development life-cycle.</p>
         <p>We know what shortcuts are worth taking and where it matters to &#8220;build it the right way.&#8221;</p>
         <p>From marketing copy to code, we&#8217;ll double-check our work and leave you with the best product possible.</p>
@@ -126,7 +130,10 @@
   <section id="no-freeloaders" class="contain">
     <div>
       <div class="image-container">
-        <img src="images/cacti.png" alt="" />
+        <picture>
+          <source srcset="images/cacti.png" media="(min-width:1000px)" />
+          <img src="images/cactus.png" alt="" />
+        </picture>
       </div>
       <div class="description">
         <h3>No Freeloaders<emoji-img data-emoji="flex"></emoji-img></h3>

@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6, .display-font {
   font-weight:900;
   font-style:normal;
 }
-strong.highlight {color:var(--highlight);}
+p {margin:.5em 0;line-height:150%;}
 a {text-decoration:none;}
 .links a {
   color:var(--text-primary);
@@ -60,12 +60,13 @@ a.trailing-arrow::after {
   padding-left:4px;
   transition:all ease 70ms;
 }
+.i-block {display:inline-block;}
 
 .flex-row {
   display:flex;
   flex-flow:row;
 }
-.flex-col-row {
+[class^='flex-col-row'] {
   display:flex;
   flex-flow:column;
   width:calc(100vw - 80px);
@@ -73,6 +74,9 @@ a.trailing-arrow::after {
 }
 @media (min-width:768px) {
   .flex-col-row {flex-flow:row;}
+}
+@media (min-width:1000px) {
+  .flex-col-row-1k {flex-flow:row;}
 }
 
 emoji-img img {

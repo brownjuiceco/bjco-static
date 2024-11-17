@@ -1,0 +1,35 @@
+#no-freeloaders {margin-top:40px;}
+#no-freeloaders .image-container {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  float:right;
+  max-width:40vw;
+  margin-top:-40px;
+}
+#no-freeloaders picture {text-align:center;}
+#no-freeloaders img {
+  max-width:83%;
+  transform:rotate(1deg);
+}
+#no-freeloaders .description {flex-grow:1;}
+
+@media(min-width:768px) {
+  #no-freeloaders {margin-top:60px;}
+}
+@media(min-width:768px) {
+  #no-freeloaders {
+    margin-top:20px;
+    position:relative;
+    z-index:1;
+  }
+  #no-freeloaders .image-container {
+    max-width:50%;
+    margin-top:0;
+  }
+  #no-freeloaders img {
+    max-width:83%;
+  }
+}
+@media(min-width:1000px) {}
