@@ -10,13 +10,6 @@
   padding:60px 0 40px;
   margin-top:80px;
 }
-@media(prefers-color-scheme:dark) {
-  #footer,
-  #footer a {
-    background-color:black;
-    color:inherit;
-  }
-}
 #footer .flex-row {
   flex-wrap:wrap;
 }
@@ -100,5 +93,21 @@
   }
   #footer #contact {
     width:37%;
+  }
+}
+
+@media(prefers-color-scheme:dark) {
+  #footer {
+    background-color:black;
+    background-image:none;
+    color:inherit;
+  }
+  #footer a {color:inherit;}
+  #footer form input {
+    background-color:#111;
+    color:inherit;
+  }
+  #footer form input:focus {
+    background-color:#1e1e1e;
   }
 }
