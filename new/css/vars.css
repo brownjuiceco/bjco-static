@@ -1,7 +1,31 @@
+/* SIZES */
 :root {
-  --text-primary:black;
-  --highlight:#FF5015;
-
   --container-max:1100px;
   --container-max-buffer:calc(var(--container-max) + 100px);
 }
+
+/* COLORS */
+:root {
+  --text-primary:black;
+  --text-secondary:#35576C;
+  --highlight:#FF5015;
+
+  --background-primary:white;
+  --background-primary-transparent:#ffffff00;
+
+}
+@media(prefers-color-scheme:dark) {
+ :root {
+    --text-primary:#dfdfe4;
+    --text-secondary:#b6c5cf;
+    --highlight:#FF5015;
+
+    --background-primary:#2c2c2f;
+    --background-primary-transparent:#2c2c2f00;
+  }
+}
+
+/* STYLES */
+.highlight {color:var(--highlight);}
+.text-secondary {color:var(--text-secondary);}
+.bold {font-weight:bold;}

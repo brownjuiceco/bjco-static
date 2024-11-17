@@ -1,0 +1,91 @@
+#ds-experts {position:relative;}
+#ds-experts::before {
+  content:'';
+  aspect-ratio:3.2;
+  background-color:var(--background-primary);
+  background-image:url('../images/below-header-wedge.svg');
+  background-blend-mode:color-burn;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  display:block;
+  position:absolute;
+  inset:0;
+  z-index:-1;
+}
+
+#ds-experts em {font-weight:bold;font-style:normal;}
+#ds-experts em {font-weight:bold;font-style:normal;}
+#ds-experts .flex-row {
+  flex-direction:column;
+  gap:20px;
+}
+#ds-experts .anim-container {
+  position:relative;
+  margin-top:-85px;
+  margin-right:-20px;
+  text-align:right;
+  transform:scale(0.9);
+}
+#ds-experts .anim-container img {
+  display:block;
+  margin-left:auto;
+  width:calc(100% - 280px);
+}
+#ds-experts .anim-container img.positioned {
+  position:absolute;
+  top:0;
+  right:0;
+}
+#ds-experts .anim-container img.anim {
+  position:absolute;
+  mix-blend-mode:multiply;
+  width:calc(100vw - 430px);
+  right:7.2vw;
+  top:10px;
+  z-index:0;
+  transform:scale(.9);
+}
+#ds-experts .description {
+  background:linear-gradient(var(--background-primary-transparent) 120px, var(--background-primary) 240px);
+  margin-top:-90px;
+  margin-right:auto;
+  padding-bottom:80px;
+
+  position:relative;
+}
+/* desktop */
+@media (min-width:800px) {
+  #ds-experts .flex-row {
+    flex-direction:row-reverse;
+    gap:10px;
+  }
+  #ds-experts .anim-container {
+    display:block;
+    padding:0;
+  }
+  #ds-experts .anim-container img {max-width:45vw;width:auto;}
+  #ds-experts .anim-container img.anim {
+    max-width:32vw;
+    width:inherit;
+  }
+  #ds-experts .description {
+    margin-top:0;
+    max-width:500px;
+    padding-bottom:0;
+    background:none;
+  }
+}
+@media (min-width:900px) {
+  #ds-experts .flex-row {gap:20px;}
+  #ds-experts .anim-container {margin-top:-12vw;}
+}
+@media (min-width:1100px) {
+  #ds-experts .anim-container {margin-top:max(-20vw, -260px);}
+  #ds-experts .anim-container img {max-width:500px;width:auto;}
+  #ds-experts .anim-container img.anim {
+    max-width:350px;
+    width:inherit;
+    right:80px;
+  }
+}

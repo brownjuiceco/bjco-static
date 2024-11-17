@@ -1,4 +1,4 @@
-class ArrowA extends HTMLElement {
+class aArrow extends HTMLElement {
   constructor() {
     super();
     this.render();
@@ -6,9 +6,9 @@ class ArrowA extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <a class="fas-a trailing-arrow" href="${this.getAttribute("url")}">${this.getAttribute("text")}</a>
+      <a class="fas-a trailing-arrow ${this.getAttribute("data-classes")}" href="${this.getAttribute("data-url")}">${this.getAttribute("data-text")}</a>
     `;
   }
 }
 
-customElements.define('a-arrow', ArrowA);
+customElements.define('a-arrow', aArrow);

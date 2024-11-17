@@ -1,5 +1,4 @@
 @import url('vars.css');
-@import url('header.css');
 @import url('navbar.css');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -24,6 +23,8 @@
   padding-left:40px;
 }
 body {
+  background-color:var(--background-primary);
+  color:var(--text-primary);
   margin:0;
   position:relative;
 }
@@ -47,19 +48,37 @@ a {text-decoration:none;}
   max-width:fit-content;
   font-weight:bold;
 }
+a-arrow {display:block;padding:4px 0;}
 a.trailing-arrow:hover::after {
-  padding-left:8px;
   padding-right:0;
+  padding-left:10px;
 }
 a.trailing-arrow::after {
   content:'\f061';
   color:var(--highlight);
-  padding-left:0;
-  padding-right:8px;
+  padding-right:6px;
+  padding-left:4px;
   transition:all ease 70ms;
 }
 
 .flex-row {
   display:flex;
   flex-flow:row;
+}
+.flex-col-row {
+  display:flex;
+  flex-flow:column;
+  width:calc(100vw - 80px);
+  width:-webkit-fill-available;
+}
+@media (min-width:768px) {
+  .flex-col-row {flex-flow:row;}
+}
+
+emoji-img img {
+  display:inline-block;
+  margin-bottom:-.1em;
+  max-height:1.25em;
+  user-select:none;
+  -webkit-user-select:none;
 }

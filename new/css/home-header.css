@@ -18,7 +18,7 @@ header {
   padding-bottom:16px;
   filter: drop-shadow(1px 1px black) drop-shadow(2px 2px black) drop-shadow(3px 3px black) drop-shadow(4px 4px black) drop-shadow(5px 5px black);
 }
-header {position:relative;}
+header {position:relative;color:black;}
 header h2 {margin:.5rem 0 1rem;font-weight:normal;}
 header h2 b {font-weight:900;}
 header .buttons {
@@ -56,4 +56,3 @@ header a.button:hover {
     margin-left:-16px;
   }
 }
-@media (min-width:var(--container-max-buffer)) {}

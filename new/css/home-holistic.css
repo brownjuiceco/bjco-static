@@ -1,0 +1,45 @@
+#holistic-approach {
+  padding-top:50px;
+}
+#holistic-approach .image-container {
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  max-width:100%;
+
+  padding-top:70px;
+  position:relative;
+}
+#holistic-approach .image-container picture {
+  text-align:center;
+  aspect-ratio:1.3;
+  float:right;
+}
+#holistic-approach .image-container img,
+#holistic-approach .overlaid img {
+  max-width:min(80%, 80vw);
+  margin:auto;
+  transform:rotate(-3.5deg);
+}
+#holistic-approach .overlaid {
+  position:absolute;
+  z-index:1;
+}
+#holistic-approach .overlaid img {
+  margin-top:-40px;
+  margin-left:-100px;
+}
+
+@media(min-width:768px) {
+  #holistic-approach .image-container {
+    max-width:47%;
+  }
+  #holistic-approach .image-container img,
+  #holistic-approach .overlaid img {
+    max-width:min(32vw, 70%);
+  }
+
+  #holistic-approach .description {
+    max-width:50%;
+  }
+}
