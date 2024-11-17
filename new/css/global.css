@@ -1,5 +1,6 @@
 @import url('vars.css');
 @import url('navbar.css');
+@import url('footer.css');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 .fat-b::before, .fat-a::after,
@@ -65,6 +66,10 @@ a.trailing-arrow::after {
 .flex-row {
   display:flex;
   flex-flow:row;
+}
+.flex-col {
+  display:flex;
+  flex-flow:column;
 }
 [class^='flex-col-row'] {
   display:flex;

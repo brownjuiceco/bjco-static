@@ -7,6 +7,12 @@
   background-position-x:10px;
   padding-bottom:110px;
 }
+@media(prefers-color-scheme:dark) {
+  #billions .content{
+    background-image:url('../images/beige-blob-dark.svg');
+    background-blend-mode:unset;
+  }
+}
 #big-money {flex-grow:1;}
 .flex-col-row .powers {display:none;}
 .powers {
