@@ -4,3 +4,8 @@
 @import url('home-billions.css');
 @import url('home-holistic.css');
 @import url('home-freeloaders.css');
+
+#logo {display:none;}
+@media (min-width:430px) {
+  #logo {display:inline-block;}
+}

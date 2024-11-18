@@ -8,15 +8,16 @@
   max-width:55vw;
   padding:0 0 50px 2vw;
   shape-outside:circle(36%) border-box;
-  shape-margin:2rem;
+  shape-margin:3.4rem;
+  margin-top:60px;
 }
 #good-company .image-container img {
   display:block;
-  max-width:min(55vw, 500px);
-  margin-top:30px;
-  margin-right:-7vw;
+  max-width:min(50vw, 500px);
   margin-left:auto;
+  margin-right:-2vw;
 }
+
 #good-company .description {
   background:var(--background-primary);
   max-width:650px;
@@ -28,11 +29,10 @@
   #good-company .image-container {
     max-width:50vw;
     shape-outside:circle(40%) border-box;
+    margin-top:0;
+    shape-margin:2rem;
   }
-  #good-company .image-container img {
-    max-width:min(50vw, 500px);
-    margin-right:-3vw;
-  }
+  #good-company .image-container img {margin-top:-30px;}
 }
 @media (min-width:768px) {
   #good-company .image-container {
