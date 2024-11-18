@@ -1,11 +1,17 @@
+@media(prefers-color-scheme:dark) {
+  :root {
+    --footer-squiggle:'../images/footer-squiggle-dark.svg';
+  }
+}
 #footer {
   background-color:#FFCFAB;
-  background-image:url('../images/footer-squiggle-light.svg'), url('../images/grid.png'), linear-gradient(#FFE8E3 0%, #FFCFAB 100%);
-  background-size:contain, calc(323px / 3) calc(501px/3), cover;
+  background-image:url('../images/footer-squiggle-light.svg'), url('../images/grid-light.png'), linear-gradient(#FFE8E3 0%, #FFCFAB 100%);
+  background-size:56px 47px, calc(323px / 3) calc(501px/3), cover;
   background-repeat:repeat-x, repeat, no-repeat;
   background-position:top center;
   background-blend-mode:normal, soft-light, normal;
   overflow:hidden;
+
 
   color:#B8440C;
   padding:60px 0 30px;
@@ -22,17 +28,21 @@
   width:190px;
   padding-bottom:1.5em;
 }
+#footer h4 {
+  font-size:1.6em;
+  margin:1.5em 0 1em;
+}
 #footer h5 {
   font-family:inherit;
-  font-size:1.1em;
-  font-weight:600;
-  margin:0.2em 0;
+  font-size: 1.2em;
+  font-weight: 900;
+  margin: 0.4em 0;
 }
 #footer a {
   display:block;
   text-wrap:nowrap;
   color:inherit;
-  margin:.15em 0;
+  margin:.25em 0;
 }
 #footer a.you-are-here {color:var(--highlight);}
 #footer a.you-are-here::before {
@@ -58,7 +68,10 @@
   max-width: 120%;
   z-index:0;
 }
-#footer form {position:relative;}
+#footer form {
+  position:relative;
+  margin:.5em 0;
+}
 #footer form input::empty {
   content:'email@address.com';
   color:#ccc;
@@ -84,11 +97,12 @@
   filter:saturate(100%);
 }
 #footer form p {
-  line-height:1.2em;
   font-size:.85em;
+  margin-top:.8rem;
 }
 
 @media(min-width:768px) {
+  #footer h4 {margin:1em 0 .5em;}
   #footer .flex-row div {width:33%;}
 }
 @media(min-width:1000px) {
@@ -103,7 +117,8 @@
 @media(prefers-color-scheme:dark) {
   #footer {
     background-color:black;
-    background-image:none;
+    background-image:url('../images/footer-squiggle-dark.svg'), url('../images/grid-dark.png'), linear-gradient(#FFE8E30A 0%, #FFCFAB0A 100%);
+    background-blend-mode:normal;
     color:inherit;
   }
   #footer a {color:inherit;}
