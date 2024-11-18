@@ -39,8 +39,13 @@
     <div class="flex-row">
       <div class="anim-container">
         <img src="images/ipad-back.png" class="static" alt="" />
-        <img src="images/header-icons.png" class="anim" alt="an animation showing the logos of tools and technologies flowing slowly down the page in an endless loop" />
-        <img src="images/ipad-front.png" class="positioned" alt="" />
+        <div class="anim positioned">
+          <img src="images/header-icons.png" alt="an animation showing the logos of tools and technologies flowing slowly down the page in an endless loop" />
+        </div>
+        <picture class="positioned">
+          <source srcset="images/ipad-front.png" media="(min-width:800px)" />
+          <img srcset="images/ipad-frame.png" alt="" />
+        </picture>
         <!-- flowing icons -->
       </div>
       <div class="description">
