@@ -17,7 +17,7 @@
 .powers {display:none;}
 .cta-learn-secrets {
   display:flex;
-  flex-flow:column;
+  flex-flow:row;
   align-content:center;
   gap:16px;
 }
@@ -36,8 +36,8 @@
 }
 @media (min-width:375px) {
   .cta-learn-secrets div {
-    margin: -15px auto 0;
-    max-width: 75%;
+    margin:-15px auto 0;
+    max-width:75%;
   }
 }
 @media (min-width:450px) {
@@ -46,11 +46,8 @@
     aspect-ratio:1;
   }
   .cta-learn-secrets .powers {display:block;}
+  .cta-learn-secrets {flex-flow:row;}
   .cta-learn-secrets div {
-    flex-flow:row;
-
-    margin-top:-15px;
-    margin-left:5%;
     max-width:unset;
   }
 }

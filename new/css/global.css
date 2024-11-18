@@ -20,20 +20,8 @@
   max-width:var(--container-max);
   margin-right:auto;
   margin-left:auto;
-  padding-right:20px;
-  padding-left:20px;
-}
-@media (min-width:768px) {
-  *.contain > * {
-    padding-right:30px;
-    padding-left:30px;
-  }
-}
-@media (min-width:1000px) {
-  *.contain > * {
-    padding-right:40px;
-    padding-left:40px;
-  }
+  padding-right:var(--container-padding);
+  padding-left:var(--container-padding);
 }
 body {
   background-color:var(--background-primary);

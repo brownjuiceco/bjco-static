@@ -2,6 +2,13 @@
 :root {
   --container-max:1100px;
   --container-max-buffer:calc(var(--container-max) + 100px);
+  --container-padding:20px;
+}
+@media (min-width:768px) {
+  :root {--container-padding:30px;}
+}
+@media (min-width:1000px) {
+  :root {--container-padding:40px;}
 }
 
 /* COLORS */

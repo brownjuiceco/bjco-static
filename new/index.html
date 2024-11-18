@@ -40,7 +40,10 @@
       <div class="anim-container">
         <img src="images/ipad-back.png" class="static" alt="" />
         <div class="anim positioned">
-          <img src="images/header-icons.png" alt="an animation showing the logos of tools and technologies flowing slowly down the page in an endless loop" />
+          <picture>
+            <source srcset="images/header-icons-dark.png" media="(prefers-color-scheme:dark)">
+            <img src="images/header-icons-light.png" alt="an animation showing the logos of tools and technologies flowing slowly down the page in an endless loop" />
+          </picture>
         </div>
         <picture class="positioned">
           <source srcset="images/ipad-front.png" media="(min-width:800px)" />
@@ -52,6 +55,9 @@
         <h3>Design System Experts</h3>
         <p>Our team has worked on Web Apps, Mobile Apps, Design Systems, and Component Libraries for industry leaders and <strong>for over 20 years.</strong></p>
         <picture>
+          <source srcset="images/ds-components-dark-wide.png" media="(prefers-color-scheme:dark) and (min-width:420px)" />
+          <source srcset="images/ds-components-light-wide.png" media="(min-width:420px)" />
+
           <source srcset="images/ds-components-dark.png" media="(prefers-color-scheme:dark)">
           <img src="images/ds-components-light.png" alt="a grid of UI components" />
         </picture>
