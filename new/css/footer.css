@@ -100,6 +100,7 @@
   font-size:.85em;
   margin-top:.8rem;
 }
+#footer #last-line {font-size:.85em;}
 
 @media(min-width:768px) {
   #footer h4 {margin:1em 0 .5em;}

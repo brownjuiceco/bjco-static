@@ -3,11 +3,12 @@
 }
 #holistic-approach .image-container {
   display:flex;
-  justify-content:flex-start;
+  justify-content:center;
   max-width:100%;
 
   position:relative;
   transition:all .5s ease-in;
+  transform:scale(.9);
 }
 #holistic-approach .image-container picture {
   max-width:60%;
@@ -26,7 +27,7 @@
   transform:rotate(-3.5deg);
   transition-timing-function:ease-in;
   transition-duration:.5s;
-  transition-property:margin-left margin-top;
+  transition-property:transform, margin-top, margin-left;
 }
 #holistic-approach .overlaid {
   position:absolute;
@@ -34,19 +35,23 @@
 }
 
 #holistic-approach.animated .image-container img {
-  margin-top:30px;
-  margin-left:50px;
+  transform:translate(20vw, 35px) rotate(-3.5deg);
 }
 #holistic-approach.animated .overlaid img {
-  margin-top:-20px;
-  margin-left:-50px;
+  transform:translate(-20vw, -35px) rotate(-3.5deg);
 }
 
+
 #holistic-approach .description {
-  background:linear-gradient(var(--background-primary-transparent) 0%, var(--background-primary) 10%);
-  margin-top:-90px;
+  margin-top:-40px;
   position:relative;
   z-index:1;
+}
+@media(min-width:550px) {
+  #holistic-approach .description {margin-top:-60px;}
+}
+@media(min-width:710px) {
+  #holistic-approach .description {margin-top:-90px;}
 }
 @media(min-width:768px) {
   #holistic-approach .image-container {
@@ -61,8 +66,19 @@
   #holistic-approach .overlaid img {
     max-width:min(32vw, 70%);
   }
-  #holistic-approach.animated .image-container {
+  #holistic-approach .image-container {
     padding-right:20px;
+    transform:unset;
+  }
+  #holistic-approach.animated .image-container img {
+    transform:rotate(-3.5deg);
+    margin-top:40px;
+    margin-left:20px;
+  }
+  #holistic-approach.animated .overlaid img {
+    transform:rotate(-3.5deg);
+    margin-top:-40px;
+    margin-left:-20px;
   }
 
   #holistic-approach .description {

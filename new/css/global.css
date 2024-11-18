@@ -34,6 +34,7 @@ body, .body-font {
   font-family:"Inter", sans-serif;
   font-optical-sizing:auto;
   font-style:normal;
+  font-weight:300;
 }
 h1, h2, h3, h4, h5, h6, .display-font {
   font-family:"Heebo", sans-serif;
@@ -61,7 +62,11 @@ a.trailing-arrow::after {
   padding-left:4px;
   transition:all ease 70ms;
 }
-.i-block {display:inline-block;}
+[class^='i-block'] {display:inline-block;}
+.i-block-768 {display:block;}
+@media (min-width:768px) {
+  .i-block-768 {display:inline-block;}
+}
 
 .flex-row {
   display:flex;

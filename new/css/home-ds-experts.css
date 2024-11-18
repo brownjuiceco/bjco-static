@@ -79,6 +79,7 @@
     animation:iconsLoop 30s;
     animation-timing-function:linear;
     animation-iteration-count:infinite;
+    animation-fill-mode:forwards;
   }
   @keyframes iconsLoop {
     from {transform:translate3d(0, calc(var(--startingPos) * 1px), 0);}
