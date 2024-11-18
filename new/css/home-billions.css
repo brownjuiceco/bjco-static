@@ -14,19 +14,12 @@
   }
 }
 #big-money {flex-grow:1;}
-.flex-col-row .powers {display:none;}
-.powers {
-  max-width:34%;
-  aspect-ratio:1;
-}
+.powers {display:none;}
 .cta-learn-secrets {
   display:flex;
-  flex-flow:row;
+  flex-flow:column;
   align-content:center;
   gap:16px;
-
-  margin-top:-30px;
-  margin-left:5%;
 }
 .cta-learn-secrets div {
   font-size:1.3em;
@@ -40,6 +33,26 @@
   font-weight:bold;
   line-height:120%;
   margin:0;
+}
+@media (min-width:375px) {
+  .cta-learn-secrets div {
+    margin: -15px auto 0;
+    max-width: 75%;
+  }
+}
+@media (min-width:450px) {
+  .powers {
+    max-width:34%;
+    aspect-ratio:1;
+  }
+  .cta-learn-secrets .powers {display:block;}
+  .cta-learn-secrets div {
+    flex-flow:row;
+
+    margin-top:-15px;
+    margin-left:5%;
+    max-width:unset;
+  }
 }
 @media (min-width:568px) {
   .cta-learn-secrets {gap:36px;}
