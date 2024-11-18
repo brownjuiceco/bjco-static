@@ -34,6 +34,9 @@
 
   position:relative;
 }
+#ds-experts .description img {
+  max-width:100%;
+}
 @media (min-width:375px) {
   #ds-experts .description {
     margin-top:-90px;
