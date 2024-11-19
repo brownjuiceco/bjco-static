@@ -1,7 +1,85 @@
-<picture>
-  <source srcset="images/ds-components-dark-wide.png" media="(prefers-color-scheme:dark) and (min-width:500px)" />
-  <source srcset="images/ds-components-light-wide.png" media="(min-width:500px)" />
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brown Juice Process</title>
 
-  <source srcset="images/ds-components-dark.png" media="(prefers-color-scheme:dark)">
-  <img src="images/ds-components-light.png" alt="a grid of UI components" />
-</picture>
+  <link rel="stylesheet" type="text/css" media="all" href="css/global.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/process.css">
+
+  <script src="jquery.js"></script>
+  <script src="https://kit.fontawesome.com/f413eee953.js" crossorigin="anonymous"></script>
+  <script type="module" src="components/navbar.js"></script>
+  <script type="module" src="components/subnav.js"></script>
+  <script type="module" src="components/aArrow.js"></script>
+  <script type="module" src="components/emoji.js"></script>
+  <script type="module" src="components/footer.js"></script>
+  <script src="process.js"></script>
+
+  <style type="text/css">
+  </style>
+</head>
+
+<body>
+  <header class="contain">
+    <nav-bar></nav-bar>
+    <sub-nav></sub-nav>
+    <div id="content">
+      <img class="headline-img" src="images/global/logo-header.png" alt="Brown Juice Co" />
+      <!-- Brown Ju-wha? -->
+      <h2 class="body-font" data-lang="en">Process: Awesome</h2>
+      <div class="buttons">
+        <a class="button" href="contact.html" data-lang="en">Meet Us</a>
+        <a class="button" href="portfolio.html" data-lang="en">Portfolio</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="no-nonsense" class="contain">
+    <div class="flex-row">
+      <div>
+        <h3>No-Nonsense Product Design</h3>
+        <p>We don&#8217;t believe in bringing on a bunch of unnecessary project managers, coordinators, coffee-fetchers, etc.</p>
+        <p>We work in discrete units to minimize the overhead and maximize our velocity.</p>
+        <p>We&#8217;ll focus on the product and your users so that you can stay laser-focused on running your business.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="expert-eyes" class="contain">
+    <div class="flex-row">
+      <div class="description">
+        <h3>A Fresh Set of (Expert) Eyes</h3>
+        <p>Is your team deep on a project? If you go too long without a fresh perspective, it can be hard to keep focus on the customers&#8217; needs.</p>
+        <p>There&#8217;s a lot at stake whenever you launch a new product, and customers won&#8217;t buy what they don&#8217;t need.</p>
+        <p>If you want to make a good product, trust yourself.<br>If you want to make a great product, trust the experts.</p>
+      </div>
+      <div class="image-container">
+        <!-- Apple, UI components -->
+      </div>
+    </div>
+  </section>
+
+  <section id="meet-expertise" class="contain">
+    <div class="flex-row">
+      <div class="description">
+        <h3>Experience, Meet &#8220;Expertise&#8221;</h3>
+        <p>We believe in the expertise of your team; we are data-driven, we start with &#8220;first principles&#8221;, and we listen.</p>
+        <p>By taking the time to understand your unique constraints, we can find the middle-ground between your customer needs with your team&#8217;s capabilities and your business objectives.</p>
+        <p>No egos; just amazing products.</p>
+      </div>
+      <div class="image-container">
+        <!-- Apple, UI components -->
+      </div>
+    </div>
+  </section>
+
+  <global-footer></global-footer>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    // trailing script
+  });
+</script>
+</body>
