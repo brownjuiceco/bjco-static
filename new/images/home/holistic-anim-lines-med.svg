@@ -5,7 +5,7 @@
   values="0;102"
   dur="5s"
   calcMode="linear"
-  repeatCount="3" />
+  repeatCount="indefinite" />
 <defs>
 <linearGradient id="paint0_linear_735_1416" x1="-11.7759" y1="205.877" x2="309.372" y2="205.877" gradientUnits="userSpaceOnUse">
 <stop stop-color="#ECD0FF88"/>

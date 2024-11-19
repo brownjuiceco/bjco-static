@@ -1,8 +1,7 @@
 $(document).ready(function() {
-  $('#holistic-approach').on('click', function(){
-    console.log('click')
-    $('#holistic-approach').toggleClass('animated')
-  });
+  // $('#holistic-approach').on('click', function(){
+  //   $('#holistic-approach').toggleClass('animated')
+  // });
 
   // set up animation
   buildAnimation();
