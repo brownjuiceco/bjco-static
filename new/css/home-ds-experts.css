@@ -68,6 +68,28 @@
     position:absolute;
     overflow-y:hidden;
     border-radius:6vw;
+    bottom:-400px;
+  }
+  .anim::before {
+    /* background:linear-gradient(var(--background-primary-transparent) 0, var(--background-primary) 100%);
+       height: 10vw; */
+    content:'';
+    position:absolute;
+    inset:auto 0 0;
+    z-index:1;
+    display:block;
+    height:50%;
+    /* glass effect */
+    background-image:radial-gradient(transparent 1.5px, var(--background-primary) 1.5px), linear-gradient(transparent 90%, var(--background-primary) 100%);
+    background-size:6px 6px, 100% 15%;
+    background-position-y:bottom;
+    background-repeat:repeat, no-repeat;
+    backdrop-filter:blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+    mask:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%);
+    mask-size:auto;
+    mask-composite:add;
+    mask-mode:match-source;
   }
   #ds-experts .anim-container .anim img {
     opacity: 0.5;
@@ -105,28 +127,8 @@
   #ds-experts .anim-container .anim {
     max-width:40vw;
     left:2.5vw;
+    bottom:0;
     width:inherit;
-  }
-  .anim::before {
-    /* background:linear-gradient(var(--background-primary-transparent) 0, var(--background-primary) 100%);
-       height: 10vw; */
-    content:'';
-    position:absolute;
-    inset:auto 0 0;
-    z-index:1;
-    display:block;
-    height:50%;
-    /* glass effect */
-    background-image:radial-gradient(transparent 2px, var(--background-primary) 2px), linear-gradient(transparent 60%, var(--background-primary) 100%);
-    background-size:6px 6px, 100% 50%;
-    background-position-y:bottom;
-    background-repeat:repeat, no-repeat;
-    backdrop-filter:blur(5px);
-    -webkit-backdrop-filter:blur(5px);
-    mask:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 50%);
-    mask-size:auto;
-    mask-composite:add;
-    mask-mode:match-source;
   }
   #ds-experts .description {
     margin-top:30px;
@@ -140,11 +142,20 @@
   #ds-experts .anim-container {margin-top:-12vw;}
 }
 @media (min-width:1100px) {
+  #ds-experts::before {
+    background-size:contain;
+    background-image:url('../images/home/below-header-wedge-short.svg');
+  }
   #ds-experts .anim-container {margin-top:max(-20vw, -260px);}
   #ds-experts .anim-container img {max-width:500px;width:auto;}
   #ds-experts .anim-container .anim {
     max-width:450px;
     width:inherit;
     left:24px;
+  }
+}
+@media (min-width:2000px) {
+  .anim::before {
+    mask:linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 42%);
   }
 }

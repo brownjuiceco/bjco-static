@@ -19,6 +19,8 @@
 #holistic-approach .overlaid {
   max-width:calc(100% - 20px);
   max-height:100%;
+  position:absolute;
+  z-index:2;
 }
 #holistic-approach .image-container img,
 #holistic-approach .overlaid img {
@@ -29,16 +31,32 @@
   transition-duration:.5s;
   transition-property:transform, margin-top, margin-left;
 }
-#holistic-approach .overlaid {
-  position:absolute;
-  z-index:1;
-}
 
 #holistic-approach.animated .image-container img {
   transform:translate(20vw, 35px) rotate(-3.5deg);
 }
 #holistic-approach.animated .overlaid img {
   transform:translate(-20vw, -35px) rotate(-3.5deg);
+}
+#holistic-approach .behind {position:relative;}
+#holistic-approach .behind::before {
+  content:'';
+  display:block;
+  position:absolute;
+  inset:0;
+  z-index:1;
+
+  opacity:0;
+
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+#holistic-approach.animated .behind::before {
+  opacity:1;
+  transition:opacity .6s;
+  transition-delay:.4s;
+
+  background-image:url('../images/home/holistic-anim-lines-small.svg');
 }
 
 
@@ -72,13 +90,16 @@
   }
   #holistic-approach.animated .image-container img {
     transform:rotate(-3.5deg);
-    margin-top:40px;
-    margin-left:20px;
+    margin-top:60px;
+    margin-left:80px;
   }
   #holistic-approach.animated .overlaid img {
     transform:rotate(-3.5deg);
     margin-top:-40px;
-    margin-left:-20px;
+    margin-left:-100px;
+  }
+  #holistic-approach.animated .behind::before {
+    background-image:url('../images/home/holistic-anim-lines-med.svg');
   }
 
   #holistic-approach .description {
@@ -90,5 +111,18 @@
 @media(min-width:1000px) {
   #holistic-approach .description {
     margin-top:-20px;
+  }
+  #holistic-approach.animated .image-container img {
+    transform:rotate(-3.5deg);
+    margin-top:40px;
+    margin-left:90px;
+  }
+  #holistic-approach.animated .overlaid img {
+    transform:rotate(-3.5deg);
+    margin-top:-20px;
+    margin-left:-110px;
+  }
+  #holistic-approach.animated .behind::before {
+    background-image:url('../images/home/holistic-anim-lines-large.svg');
   }
 }
