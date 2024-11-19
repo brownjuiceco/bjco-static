@@ -3,7 +3,7 @@
   content:'';
   aspect-ratio:3.2;
   background-color:var(--background-primary);
-  background-image:url('../images/below-header-wedge.svg');
+  background-image:url('../images/home/below-header-wedge.svg');
   background-blend-mode:color-burn;
   background-size:cover;
   background-repeat:no-repeat;

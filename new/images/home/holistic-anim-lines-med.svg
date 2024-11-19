@@ -1,0 +1,16 @@
+<svg width="346" height="277" viewBox="0 0 346 277" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M48.8925 125.468C-64.8204 193.798 53.5443 337.365 142.676 241.687M134.045 125.468C134.045 241.929 239.545 255.865 280.045 216.865M215.045 26.8651C355.802 -74.2001 409.045 175.365 223.566 133.866" stroke="url(#paint0_linear_735_1416)" stroke-width="5" stroke-linecap="round" stroke-dasharray="15 19"/>
+ <animate
+        attributeName="stroke-dashoffset"
+        values="0;102"
+        dur="1s"
+        calcMode="linear"
+        repeatCount="indefinite" />
+<defs>
+<linearGradient id="paint0_linear_735_1416" x1="-11.7759" y1="205.877" x2="309.372" y2="205.877" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ECD0FF88"/>
+<stop offset="0.5" stop-color="#FB63A088"/>
+<stop offset="1" stop-color="#FAC23488"/>
+</linearGradient>
+</defs>
+</svg>

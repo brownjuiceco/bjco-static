@@ -1,6 +1,6 @@
 #billions .content{
   background-color:var(--background-primary);
-  background-image:url('../images/beige-blob.svg');
+  background-image:url('../images/home/billions-beige-blob.svg');
   background-blend-mode:color-burn;
   background-size:contain;
   background-repeat:no-repeat;
@@ -9,7 +9,7 @@
 }
 @media(prefers-color-scheme:dark) {
   #billions .content{
-    background-image:url('../images/beige-blob-dark.svg');
+    background-image:url('../images/home/billions-beige-blob-dark.svg');
     background-blend-mode:unset;
   }
 }

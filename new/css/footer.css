@@ -1,11 +1,6 @@
-@media(prefers-color-scheme:dark) {
-  :root {
-    --footer-squiggle:'../images/footer-squiggle-dark.svg';
-  }
-}
 #footer {
   background-color:#FFCFAB;
-  background-image:url('../images/footer-squiggle-light.svg'), url('../images/grid-light.png'), linear-gradient(#FFE8E3 0%, #FFCFAB 100%);
+  background-image:url('../images/global/footer-squiggle-light.svg'), url('../images/global/footer-grid-light.png'), linear-gradient(#FFE8E3 0%, #FFCFAB 100%);
   background-size:56px 47px, calc(323px / 3) calc(501px/3), cover;
   background-repeat:repeat-x, repeat, no-repeat;
   background-position:top center;
@@ -118,7 +113,7 @@
 @media(prefers-color-scheme:dark) {
   #footer {
     background-color:black;
-    background-image:url('../images/footer-squiggle-dark.svg'), url('../images/grid-dark.png'), linear-gradient(#FFE8E30A 0%, #FFCFAB0A 100%);
+    background-image:url('../images/global/footer-squiggle-dark.svg'), url('../images/global/footer-grid-dark.png'), linear-gradient(#FFE8E30A 0%, #FFCFAB0A 100%);
     background-blend-mode:normal;
     color:inherit;
   }

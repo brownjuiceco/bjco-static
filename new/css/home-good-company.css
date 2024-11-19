@@ -39,7 +39,7 @@
     position:relative;
   }
   #good-company .image-container::after {
-    background-image:url('../images/curly-arrow.svg');
+    background-image:url('../images/home/curly-arrow.svg');
     background-repeat:no-repeat;
     background-size:contain;
 

@@ -11,7 +11,7 @@ class NavBar extends HTMLElement {
     this.innerHTML = `
       <div id="left">
         <a href="https://brownjuice.co">
-          <img id="logo" src="images/logo-inline.svg" alt="Brown Juice Co" />
+          <img id="logo" src="images/global/logo-inline.svg" alt="Brown Juice Co" />
         </a>
       </div>
 
