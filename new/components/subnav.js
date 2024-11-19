@@ -6,11 +6,11 @@ class SubNav extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <a href="/team.html">Team</a>
+      <a href="team.html">Team</a>
       •
-      <a href="/process.html">Process</a>
+      <a href="process.html">Process</a>
       •
-      <a href="/company.html">Company</a>
+      <a href="contact.html">Contact</a>
     `;
   }
 }
