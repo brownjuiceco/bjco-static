@@ -1,0 +1,16 @@
+<animate
+  attributeName="stroke-dashoffset"
+  values="0;96"
+  dur="5s"
+  calcMode="linear"
+  repeatCount="3" />
+<defs>
+
+<!-- 
+  `values` should be a multiple of the <path>'s dash-array 
+  eg, stroke-dasharray="9 21"  =>  30  =>  values="0;90"
+
+  note: swapping the order `0;90` vs `90;0` will change the animation direction
+
+  `repeatCount` can be set to "indefinite" for an endless animation
+ -->

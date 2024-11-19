@@ -1,11 +1,11 @@
 <svg width="355" height="242" viewBox="0 0 355 242" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M134.66 100.838C207.66 96.3378 294.464 93.5418 351.8 195.27M3.47852 148.821C42.9785 204.32 192.479 289.32 245.979 198.82M67.4785 3.82031C139.479 4.82031 226.162 24.322 261.979 70.8212M23.3678 94.0309C62.8678 149.53 162.459 201.621 273.842 159.444" stroke="url(#paint0_linear_735_1413)" stroke-width="6" stroke-linecap="round" stroke-dasharray="9 21"/>
- <animate
-        attributeName="stroke-dashoffset"
-        values="0;90"
-        dur="1s"
-        calcMode="linear"
-        repeatCount="indefinite" />
+<animate
+  attributeName="stroke-dashoffset"
+  values="0;90"
+  dur="5s"
+  calcMode="linear"
+  repeatCount="3" />
 <defs>
 <linearGradient id="paint0_linear_735_1413" x1="3.47852" y1="121.165" x2="329.479" y2="121.165" gradientUnits="userSpaceOnUse">
 <stop stop-color="#ECD0FF88"/>
