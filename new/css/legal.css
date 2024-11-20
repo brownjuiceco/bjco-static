@@ -33,19 +33,41 @@ article a::after {
 }
 
 #toc a {border:none;}
-#toc a::after {
+#toc a::after,
+article a.perma-link::after {
   opacity:0;
   transition:opacity 100ms ease;
 }
-#toc a:hover::after {opacity:1;}
+#toc a:hover::after,
+article a.perma-link:hover::after {opacity:1;}
+
 
 article a[href^="#"]::after {content:' \f06e';}
-article a[href^="http"]::after {content:' \f0c1';}
+article a[href^="http"]::after {content:' \f35d';}
 article a[href^="mail"]::after {content:' \f0e0';}
 article a[href^="tel"]::after {content:' \f095';}
 
+article a.perma-link {
+  color:var(--text-primary);
+  text-decoration:none;
+}
+article a.perma-link::after {
+  content:' \f0c1';
+  font:var(--fa-font-solid);
+}
+
 address {margin-top:1em;}
 address.inline {display:inline;}
+
+.short-summary {font-style:italic;}
+.short-summary::before {
+  content:'\f890';
+  color:var(--link);
+  font:var(--fa-font-solid);
+  margin-right:.5em;
+}
+
+
 
 .table-wrapper {
   max-width:100%;
