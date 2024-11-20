@@ -1,6 +1,15 @@
-:root {--link:color(display-p3 0 0.425 1);}
+:root {
+  --link:color(display-p3 0 0.425 1);
+  --table-border:#ddd;
+  --table-hover:#eee;
+}
+
 @media(prefers-color-scheme:dark) {
-  :root {--link:color(display-p3 1 0.808 0);}
+  :root {
+    --link:color(display-p3 1 0.808 0);
+    --table-border:#4b4c4f;
+    --table-hover:#313234;
+  }
 }
 
 article a {
@@ -37,3 +46,24 @@ article a[href^="tel"]::after {content:' \f095';}
 
 address {margin-top:1em;}
 address.inline {display:inline;}
+
+.table-wrapper {
+  max-width:100%;
+  overflow-x:auto;
+}
+table {border-collapse:collapse;text-align:left;cursor:default;}
+table i.fa-check {color:green;}
+table i.fa-times {color:red;}
+th, tr {border-bottom: 1px solid var(--table-border);}
+tr:hover {background-color:var(--table-hover);}
+th, td {
+  padding:12px 4px;
+  margin:0;
+  vertical-align:top;
+}
+td.status {text-align:center;}
+td.data-category {
+  font-weight:600;
+  min-width:min(calc(50vw - var(--container-padding) * 2), 300px);
+}
+td.details {min-width:min(calc(100vw - var(--container-padding) * 2), 500px);}
