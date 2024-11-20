@@ -21,9 +21,9 @@ class footer extends HTMLElement {
 
         <div class="flex-col">
           <h5>Products</h5>
-          <a href="">ScheduleUX</a>
-          <a href="">PM Dictionary</a>
-          <a href="">Agency Book</a>
+          <a>ScheduleUX <i class="fa-regular fa-stopwatch"></i></a>
+          <a>PM Dictionary <i class="fa-regular fa-stopwatch"></i></a>
+          <a>Agency Book <i class="fa-regular fa-stopwatch"></i></a>
         </div>
 
         <div class="flex-col">
@@ -57,7 +57,6 @@ class footer extends HTMLElement {
     </div>
   </footer>
     `;
-    console.log('test')
     this.setActive();
     this.bindEvents();
   }
