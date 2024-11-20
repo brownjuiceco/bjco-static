@@ -79,7 +79,7 @@ table i.fa-times {color:red;}
 th, tr {border-bottom: 1px solid var(--table-border);}
 tr:hover {background-color:var(--table-hover);}
 th, td {
-  padding:12px 4px;
+  padding:12px 12px 12px 0;
   margin:0;
   vertical-align:top;
 }
