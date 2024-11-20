@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brown Juice Contact</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="css/global.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/header.css">
+
+  <script src="jquery.js"></script>
+  <script src="https://kit.fontawesome.com/f413eee953.js" crossorigin="anonymous"></script>
+  <script type="module" src="components/navbar.js"></script>
+  <script type="module" src="components/subnav.js"></script>
+  <script type="module" src="components/aArrow.js"></script>
+  <script type="module" src="components/emoji.js"></script>
+  <script type="module" src="components/footer.js"></script>
+  <script src="contact.js"></script>
+  <style type="text/css">
+    form {
+      max-width:500px;
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+    }
+    input, select, textarea, button {
+      width:100%;
+      padding:0.5rem;
+      font-size:1rem;
+    }
+    textarea {
+      resize:vertical;
+    }
+    .error-message {
+      color:red;
+      font-size:0.9rem;
+    }
+    input.error, select.error, textarea.error {
+      border:2px solid red;
+    }
+    button[disabled] {
+      background:gray;
+      cursor:not-allowed;
+    }
+    #messageSent {
+      text-align:center;
+      font-size:1.2rem;
+      color:green;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="contain">
+    <nav-bar></nav-bar>
+    <sub-nav></sub-nav>
+    <div id="content">
+      <img class="headline-img" src="images/global/logo-header.png" alt="Brown Juice Co" />
+      <h2 class="body-font" data-lang="en">Legendary <b>Design and Marketing</b> <span class="i-block">from Tokyo</span></h2>
+    </div>
+  </header>
+
+  <section id="overview" class="contain">
+    <div class="description">
+      <h2 id="contactFormLabel">Contact Us <emoji-img data-emoji="wave"></emoji-img></h2>
+    </div>
+  </section>
+
+  <section id="contact-form" class="contain">
+    <form id="contactForm" aria-labelledby="contactFormLabel">
+      <label for="reason">Reason for Contact</label>
+      <select id="reason">
+        <option value="inquiry">General Inquiry</option>
+        <option value="support">Support</option>
+        <option value="feedback">Feedback</option>
+      </select>
+      <div class="error-message" id="reasonError"></div>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" />
+      <div class="error-message" id="nameError"></div>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" />
+      <div class="error-message" id="emailError"></div>
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Enter your message"></textarea>
+      <div class="error-message" id="messageError"></div>
+
+      <div id="captchaContainer" style="display:none;">
+        <p>Please complete this CAPTCHA to proceed.</p>
+        <input type="text" id="captchaQuestion" />
+        <div class="error-message" id="captchaError"></div>
+      </div>
+      <button type="submit" id="sendButton" disabled>Send</button>
+    </form>
+
+    <div id="messageSent" style="display:none;">
+      Message sent – we'll respond as soon as we can.
+    </div>
+  </section>
+
+  <global-footer></global-footer>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    // trailing script
+  });
+</script>
+</body>
+</html>
