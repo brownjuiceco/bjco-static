@@ -1,0 +1,39 @@
+:root {--link:color(display-p3 0 0.425 1);}
+@media(prefers-color-scheme:dark) {
+  :root {--link:color(display-p3 1 0.808 0);}
+}
+
+article a {
+  color:var(--link);
+  cursor:pointer;
+  font-weight:400;
+}
+article a[href^="#"] {
+  color:var(--text-primary);
+  text-decoration:none;
+  border-bottom:1px solid var(--link);
+}
+
+article a:hover {
+  color:var(--link);
+  border-bottom-color:transparent;
+}
+article a::after {
+  color:var(--link);
+  font: var(--fa-font-regular);
+}
+
+#toc a {border:none;}
+#toc a::after {
+  opacity:0;
+  transition:opacity 100ms ease;
+}
+#toc a:hover::after {opacity:1;}
+
+article a[href^="#"]::after {content:' \f06e';}
+article a[href^="http"]::after {content:' \f0c1';}
+article a[href^="mail"]::after {content:' \f0e0';}
+article a[href^="tel"]::after {content:' \f095';}
+
+address {margin-top:1em;}
+address.inline {display:inline;}
