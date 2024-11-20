@@ -1,0 +1,9 @@
+@import url('header.css');
+/*@import url('team-weird-name.css');*/
+/*@import url('team-whos-who.css');*/
+/*@import url('team-network-affect.css');*/
+
+#logo {display:none;}
+@media (min-width:430px) {
+  #logo {display:inline-block;}
+}

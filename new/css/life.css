@@ -1,0 +1,10 @@
+@import url('header.css');
+/*@import url('life-be-excellent.css');*/
+/*@import url('life-make-magic.css');*/
+/*@import url('life-no-office.css');*/
+/*@import url('life-be-passionate.css');*/
+
+#logo {display:none;}
+@media (min-width:430px) {
+  #logo {display:inline-block;}
+}
