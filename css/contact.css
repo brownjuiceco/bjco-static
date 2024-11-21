@@ -1,26 +1,65 @@
 @import url('header.css');
 
+:root {
+  --field-background:color(display-p3 0.197 0.197 0.205);
+  --field-border:color(display-p3 0.343 0.347 0.35);
+  --field-border-error:color(display-p3 1 0.373 0);
+  --outline-color:color(display-p3 1 0.373 0 / 0.5)!important
+}
 form {
-  max-width:500px;
-  margin:0 auto;
+  font-size:.85em;
+
   display:flex;
   flex-direction:column;
+  max-width:500px;
   gap:1rem;
 }
-input, select, textarea, button {
-  width:100%;
+input, select, textarea, #reason {
+  background-color:var(--field-background);
+  border:2px solid var(--field-border);
+  border-radius:8px;
+  color:var(--text-primary);
+  font-size:1em;
   padding:0.5rem;
-  font-size:1rem;
+}
+#reason {
+  display:flex;
+  justify-content:stretch;
+  padding:4px;
+  gap:5px;
+}
+#reason label {
+  border-radius:4px;
+  cursor:pointer;
+  padding:calc(.5rem - 2px);
+  text-align:center;
+  width:33%;
+}
+#reason label:has(:checked) {
+  background-color:var(--header-background);
+  color:black;
+  font-weight:700;
+}
+#reason label:not(:has(:checked)):hover {
+  background-color:var(--background-primary);
+  color:var(--text-strong);
+}
+input:focus, select:focus, textarea:focus, #reason:focus-within {
+  background-color:var(--background-primary);
+  border-color:var(--field-border-error);
+  outline:3px solid var(--outline-color);
+  outline-offset:0;
 }
 textarea {
   resize:vertical;
+  line-height:1.5em;
 }
 .error-message {
   color:red;
   font-size:0.9rem;
 }
 input.error, select.error, textarea.error {
-  border:2px solid red;
+  border:2px solid var(--field-border-error);
 }
 button[disabled] {
   background:gray;

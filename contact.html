@@ -37,11 +37,20 @@
   <section id="contact-form" class="contain">
     <form id="contactForm" aria-labelledby="contactFormLabel">
       <label for="reason">Reason for Contact</label>
-      <select id="reason">
-        <option value="inquiry">General Inquiry</option>
-        <option value="support">Support</option>
-        <option value="feedback">Feedback</option>
-      </select>
+      <div id="reason">
+        <label>
+          <input type="radio" name="reason" value="inquiry" checked hidden />
+          <span>General Inquiry</span>
+        </label>
+        <label>
+          <input type="radio" name="reason" value="support" hidden />
+          <span>Support</span>
+        </label>
+        <label>
+          <input type="radio" name="reason" value="feedback" hidden />
+          <span>Feedback</span>
+        </label>
+      </div>
       <div class="error-message" id="reasonError"></div>
 
       <label for="name">Name</label>
@@ -53,7 +62,7 @@
       <div class="error-message" id="emailError"></div>
 
       <label for="message">Message</label>
-      <textarea id="message" placeholder="Enter your message"></textarea>
+      <textarea id="message" rows="5.5" placeholder="Enter your message"></textarea>
       <div class="error-message" id="messageError"></div>
 
       <div id="captchaContainer" style="display:none;">
@@ -61,7 +70,7 @@
         <input type="text" id="captchaQuestion" />
         <div class="error-message" id="captchaError"></div>
       </div>
-      <button type="submit" id="sendButton" disabled>Send</button>
+      <button type="submit" class="shadow-button" id="sendButton" disabled>Send</button>
     </form>
 
     <div id="messageSent" style="display:none;">
