@@ -4,49 +4,162 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brown Juice Co</title>
-  <style type="text/css">
-    :root {
-      --text-primary: rgb(240, 233, 227);
-      --bg-primary: rgb(22, 14, 2);
-      --text-shadow: rgba(77, 46, 6, .65);
-    }
-    body, html {margin:0;text-align:center;background-color:var(--bg-primary);background:radial-gradient(circle, var(--bg-primary)32%, rgb(48, 28, 12) 60%, rgb(78, 57, 20));color:var(--text-primary);font-family:sans-serif;font-size:18px;font-weight:600;width:100vw;height:100vh;
-      text-shadow:-1px -1px 16px var(--text-shadow), 1px 1px 16px var(--text-shadow), -1px 1px 16px var(--text-shadow), 1px -1px 16px var(--text-shadow), 0 0 16px var(--text-shadow), 0 0 30px var(--text-shadow);
-    }
-    h1 {margin-bottom:0.1em;font-weight:400;}
-    footer {margin-top:0;}
-    p {margin:.5em 0;}
-    .emoji-img {max-height:1em;user-select:none;-webkit-user-select:none;}
-    a {color:var(--text-primary);padding-bottom:.2em;text-decoration:none;}
-    a:hover, a:active {border-bottom:2px dotted var(--text-primary);}
 
-    video {background-blend-mode:multiply;mix-blend-mode:lighten;position:absolute;width:500px;height:500px;top:calc(50vh - 250px);left:calc(50vw - 250px);user-select:none!important;}
-    div {position:fixed;inset:0 calc(50vw - 240px);z-index:2;display:flex;align-content:center;align-items:center;justify-content:center;flex-flow:column;}
+  <link rel="stylesheet" type="text/css" media="all" href="css/global.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/home.css">
 
-    @media(max-width:600px) {
-      video {width:85vw;height:85vw;top:calc(50vh - 42.5vw);left:0;position:relative;display:block;margin:0 auto;}
-      div {justify-content:space-between;padding:10vw 0;}
-    }
-  </style>
-  <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+  <script src="jquery.js"></script>
+  <script src="https://kit.fontawesome.com/f413eee953.js" crossorigin="anonymous"></script>
+  <script type="module" src="components/navbar.js"></script>
+  <script type="module" src="components/subnav.js"></script>
+  <script type="module" src="components/aArrow.js"></script>
+  <script type="module" src="components/emoji.js"></script>
+  <script type="module" src="components/footer.js"></script>
+  <script src="js/home.js"></script>
 </head>
+
 <body>
-  <video autoplay muted playsinline loop preload="auto" crossorigin="anonymous">
-    <source src="blob.webm">
-    <source src="blob.mp4">
-    <img src="blob.png">
-  </video>
-<div>
-  <header>
-    <h1>Brown Juice Co</h1>
-    <p>Tokyo, Japan</p>
+  <header class="contain">
+    <nav-bar></nav-bar>
+    <sub-nav></sub-nav>
+    <div id="content">
+      <img class="headline-img" src="images/global/logo-header.png" alt="Brown Juice Co" />
+      <h2 class="body-font" data-lang="en">Legendary <b>Design and Marketing</b> <span class="i-block">from Tokyo</span></h2>
+      <div class="buttons">
+        <a class="button" href="contact.html" data-lang="en">Meet Us</a>
+        <a class="button" href="portfolio.html" data-lang="en">Portfolio</a>
+      </div>
+    </div>
   </header>
-  <footer>
-    <p>
-      <img class="emoji-img" src="wave-emoji.png" alt="">
-      <a href="mailto:brimwd+juice@gmail.com" target="_blank">hello@brownjuice.co</a>
-    </p>
-  </footer>
-</div>
+
+  <section id="ds-experts" class="contain">
+    <div class="flex-row">
+      <div class="anim-container">
+        <img src="images/home/ipad-back.png" class="static" alt="" />
+        <div class="anim positioned">
+          <picture>
+            <source srcset="images/home/header-icons-dark.png" media="(prefers-color-scheme:dark)">
+            <img src="images/home/header-icons-light.png" alt="an animation showing the logos of tools and technologies flowing slowly down the page in an endless loop" />
+          </picture>
+        </div>
+        <picture class="positioned">
+          <!-- <source srcset="images/home/ipad-front.png" media="(min-width:800px)" /> -->
+          <img srcset="images/home/ipad-frame.png" alt="" />
+        </picture>
+        <!-- flowing icons -->
+      </div>
+      <div class="description">
+        <h3 data-lang="en">Design System Experts</h3>
+        <p data-lang="en">Our team has worked on Web Apps, Mobile Apps, Design Systems, and Component Libraries for industry leaders and <strong>for over 20 years.</strong></p>
+        <picture>
+          <source srcset="images/home/ds-components-dark-wide.png" media="(prefers-color-scheme:dark) and (min-width:420px)" data-lang="en"/>
+          <source srcset="images/home/ds-components-light-wide.png" media="(min-width:420px)" data-lang="en"/>
+
+          <source srcset="images/home/ds-components-dark.png" media="(prefers-color-scheme:dark)" data-lang="en">
+          <img src="images/home/ds-components-light.png" alt="a grid of UI components" data-lang="en"/>
+        </picture>
+        <p data-lang="en"><em>Haven&#8217;t heard about Design Systems?</em></p>
+        <p data-lang="en"><strong class="highlight">No worries!</strong> Our friendly team will help you every step of the way.</p>
+        <div class="links">
+          <a-arrow data-url="contact.html" data-text="Get Started" data-lang="en"></a-arrow>
+          <a-arrow data-url="process.html" data-text="Read about our process" data-lang="en"></a-arrow>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="good-company" class="contain">
+    <div>
+      <div class="image-container">
+        <picture>
+          <source srcset="images/home/experience-logos-dark.png" media="(prefers-color-scheme:dark)" />
+          <img src="images/home/experience-logos-light.png" alt="the logos of many major companies, including: Apple, Google, Microsoft, Amazon, Toyota, Adobe, and Bluetooth" />
+        </picture>
+      </div>
+      <div class="description">
+        <h3 data-lang="en">You&#8217;re In Good Company</h3>
+        <p data-lang="en">Our team has helped bring products to life working for many of the world&#8217;s most influential and successful companies.</p>
+        <p data-lang="en">With your dream and our expertise, we can make unforgettable experiences for your customers, too.</p>
+        <div class="links">
+          <a-arrow data-url="about.html" data-text="See our work" data-lang="en"></a-arrow>
+          <a-arrow data-url="process.html" data-text="Read about our process" data-lang="en"></a-arrow>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="billions" class="contain">
+    <div class="content">
+      <div class="flex-col-row">
+        <img src="images/home/billions.svg" id="big-money" alt="1.4 Billion Dollars in" data-lang="en"/>
+        <img src="images/home/dr-evil.png" class="powers" alt=""/>
+      </div>
+      <div class="cta-learn-secrets">
+        <img src="images/home/dr-evil.png" class="powers" alt=""/>
+        <div>
+          <p data-lang="en">Revenue growth from a <span class="i-block">single change</span></p>
+          <a-arrow data-url="process.html" data-text="Learn our secrets" data-classes="highlight bold" data-lang="en"></a-arrow>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pipeline" class="contain">
+    <div>
+      <h2 data-lang="en">No need to google<br />&#8220;pipeline improvements&#8221;</h2>
+      <h3 class="highlight" data-lang="en">Brown Juice Co is here to help <emoji-img data-emoji="clap"></emoji-img></h3>
+    </div>
+  </section>
+
+  <section id="holistic-approach" class="contain animated">
+    <div class="flex-col-row">
+      <div class="image-container">
+        <picture class="overlaid">
+          <source srcset="images/home/holistic-browser-dark.png" media="(prefers-color-scheme:dark)" />
+          <img src="images/home/holistic-browser.png" alt="an illustration of a beautiful app and the corresponding programming-code" data-lang="en" />
+        </picture>
+        <picture class="behind">
+          <!-- <source srcset="images/home/holistic-code-dark.png" media="(prefers-color-scheme:dark)" /> -->
+          <img src="images/home/holistic-code-dark.png" alt="" />
+        </picture>
+      </div>
+      <div class="description">
+        <h3 data-lang="en">
+          <span class="i-block-768">Holistic Approach;</span>
+          <span class="i-block-768">Attention-to-Detail<emoji-img data-emoji="monocle"></emoji-img></span>
+        </h3>
+        <p data-lang="en">We&#8217;re experts across the complete product-development life-cycle.</p>
+        <p data-lang="en">We know what shortcuts are worth taking and where it matters to &#8220;build it the right way.&#8221;</p>
+        <p data-lang="en">From marketing copy to code, we&#8217;ll double-check our work and leave you with the best product possible.</p>
+        <!-- <div class="links">
+          <a-arrow data-url="about.html" data-text="See our work"></a-arrow>
+          <a-arrow data-url="process.html" data-text="Read about our process"></a-arrow>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <section id="no-freeloaders" class="contain">
+    <div>
+      <div class="image-container">
+        <picture>
+          <source srcset="images/home/cactus.png" media="(min-width:1000px)" />
+          <img src="images/home/cacti.png" alt="" />
+        </picture>
+      </div>
+      <div class="description">
+        <h3>No Freeloaders<emoji-img data-emoji="flex"></emoji-img></h3>
+        <p>From <em>&#8220;just me&#8221;</em> to <em>&#8220;wait, you&#8217;re on this project, too?&#8221;</em>, we&#8217;ve worked on teams both big and small.</p>
+        <p>In our experience, big teams bring a lot of overhead &mdash; and it&#8217;s rare for <strong>anybody</strong> to produce at their max capacity.</p>
+        <p>At Brown Juice Co, we like it when every person matters to our outcome. If we can solve a problem with just one person, that&#8217;s what we&#8217;ll do. It&#8217;s a faster process for us and a lower cost for you.</p>
+        <!-- <div class="links">
+          <a-arrow data-url="about.html" data-text="See our work"></a-arrow>
+          <a-arrow data-url="process.html" data-text="Read about our process"></a-arrow>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <global-footer></global-footer>
 </body>
 </html>

@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  $(".headline-img").addClass("shadow");
+
+  /* set up form */
   const $form = $('#contactForm');
   const $reason = $('#reason');
   const $name = $('#name');

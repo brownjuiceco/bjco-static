@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $('.headline-img').addClass('shadow');
+
   // $('#holistic-approach').on('click', function(){
   //   $('#holistic-approach').toggleClass('animated')
   // });
