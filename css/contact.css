@@ -1,10 +1,21 @@
 @import url('header.css');
 
 :root {
-  --field-background:color(display-p3 0.197 0.197 0.205);
+  --field-background:color(display-p3 0.9 0.9 0.9);
   --field-border:color(display-p3 0.343 0.347 0.35);
   --field-border-error:color(display-p3 1 0.373 0);
-  --outline-color:color(display-p3 1 0.373 0 / 0.5)!important
+  --outline-color:color(display-p3 1 0.373 0 / 0.5);
+  --yellow-hover:color(srgb 0.98 0.7921 0.2401 / 0.37)
+
+}
+@media(prefers-color-scheme:dark) {
+  :root {
+    --field-background:color(display-p3 0.197 0.197 0.205);
+    --field-border:color(display-p3 0.825 0.825 0.825);
+    --field-border-error:color(display-p3 1 0.373 0);
+    --outline-color:color(display-p3 1 0.373 0 / 0.5);
+    --yellow-hover:color(srgb 0.98 0.7921 0.2401 / 0.37)
+  }
 }
 form {
   font-size:.85em;
@@ -15,12 +26,26 @@ form {
   gap:1rem;
 }
 input, select, textarea, #reason {
-  background-color:var(--field-background);
+  background-color:var(--background-primary);
   border:2px solid var(--field-border);
   border-radius:8px;
   color:var(--text-primary);
   font-size:1em;
   padding:0.5rem;
+}
+input:empty, select:empty, textarea:empty,
+input:placeholder-shown, select:placeholder-shown, textarea:placeholder-shown {
+  background-color:var(--field-background);
+}
+input:focus, select:focus, textarea:focus {
+  background-color:var(--background-primary);
+  border-color:var(--field-border-error);
+  outline:3px solid var(--outline-color);
+  outline-offset:0;
+}
+textarea {
+  resize:vertical;
+  line-height:1.5em;
 }
 #reason {
   display:flex;
@@ -31,7 +56,7 @@ input, select, textarea, #reason {
 #reason label {
   border-radius:4px;
   cursor:pointer;
-  padding:calc(.5rem - 2px);
+  padding:calc(.5rem - 3px);
   text-align:center;
   width:33%;
 }
@@ -41,21 +66,11 @@ input, select, textarea, #reason {
   font-weight:700;
 }
 #reason label:not(:has(:checked)):hover {
-  background-color:var(--background-primary);
+  background-color:var(--yellow-hover);
   color:var(--text-strong);
 }
-input:focus, select:focus, textarea:focus, #reason:focus-within {
-  background-color:var(--background-primary);
-  border-color:var(--field-border-error);
-  outline:3px solid var(--outline-color);
-  outline-offset:0;
-}
-textarea {
-  resize:vertical;
-  line-height:1.5em;
-}
 .error-message {
-  color:red;
+  color:var(--field-border-error);
   font-size:0.9rem;
 }
 input.error, select.error, textarea.error {
