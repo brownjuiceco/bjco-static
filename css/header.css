@@ -1,5 +1,5 @@
 header {
-  background-color:#F9CA3D;
+  background-color:var(--header-background);
   padding-bottom:40px;
 }
 .headline-img {
@@ -26,7 +26,7 @@ header .buttons {
   align-items:flex-start;
   gap:8px;
 }
-header a.button {
+.shadow-button {
   background-color:white;
   border:2px solid black;
   border-radius:6px;
@@ -41,7 +41,7 @@ header a.button {
 
   transition:all 100ms;
 }
-header a.button:hover {
+.shadow-button:not([disabled]):hover {
   transform:translate(4px, 4px);
   box-shadow:0 0 0 0 black, 0 0 0 0 black, 0 0 0 0 black, 0 0 0 0 black;
 }
