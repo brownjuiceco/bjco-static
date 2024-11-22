@@ -33,7 +33,6 @@ input, select, textarea, #reason {
   font-size:1em;
   padding:0.5rem;
 }
-input:empty, select:empty, textarea:empty,
 input:placeholder-shown, select:placeholder-shown, textarea:placeholder-shown {
   background-color:var(--field-background);
 }
@@ -76,8 +75,9 @@ textarea {
 input.error, select.error, textarea.error {
   border:2px solid var(--field-border-error);
 }
+#contact-form button {background-color:var(--header-background);}
 button[disabled] {
-  background:gray;
+  background:gray!important;
   cursor:not-allowed;
 }
 #messageSent {

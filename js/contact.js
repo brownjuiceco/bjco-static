@@ -46,32 +46,31 @@ $(document).ready(function () {
 
   function validateEmail(bypassError) {
     const emailValue = $email.val().trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     const localPart = emailValue.split('@')[0];
-    const domain = emailValue.split('@')[1];
+    const domainPart = emailValue.split('@')[1];
     const localTooManyNumbers = (localPart.match(/\d/g) || []).length > 2;
-    const domainTooManyNumbers = (domainPart.match(/\d/g) || []).length > 2;
+    const domainTooManyNumbers = domainPart ? (domainPart.match(/\d/g) || []).length > 2 : false;
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const valid = emailRegex.test(emailValue);
 
     if (!bypassError) {
+      // check format
       if (valid) {
         $emailError.text('');
         $email.removeClass('error');
       } else {
         $emailError.text('Please enter a valid email address.');
         $email.addClass('error');
-
-        if (localTooManyNumbers || domainTooManyNumbers) {
-          captchaRequired = true;
-          $('#captchaContainer').show();
-          $captchaError.text('');
-          generateCaptcha();
-        } else {
-          captchaRequired = false;
-          $('#captchaContainer').hide();
-          $captchaError.text('');
-        }
       }
+    }
+
+    // check quality (too many numbers)
+    if (localTooManyNumbers || domainTooManyNumbers) {
+      captchaRequired = true;
+      $('#captchaContainer').slideDown();
+      $captchaError.text('');
+      generateCaptcha();
     }
 
     return valid;
@@ -157,11 +156,12 @@ $(document).ready(function () {
 
   // Enable Submit Button Only When All Fields Are Valid
   function checkFormValidity(bypassError = false) {
-    const isFormValid =
-      validateName(bypassError) &&
-      validateEmail(bypassError) &&
-      validateMessage(bypassError) &&
-      validateCaptcha();
+    const name = validateName(bypassError);
+    const email = validateEmail(bypassError);
+    const message = validateMessage(bypassError);
+    const captcha = validateCaptcha();
+    const isFormValid = name && email && message && captcha;
+
     $submit.prop('disabled', !isFormValid);
 
     return isFormValid;
