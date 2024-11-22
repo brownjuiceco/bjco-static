@@ -48,6 +48,7 @@ textarea {
 }
 #reason {
   display:flex;
+  flex-flow:column;
   justify-content:stretch;
   padding:4px;
   gap:5px;
@@ -57,7 +58,10 @@ textarea {
   cursor:pointer;
   padding:calc(.5rem - 3px);
   text-align:center;
-  width:33%;
+}
+@media(min-width:768px) {
+  #reason {flex-flow:row;}
+  #reason label {width:33%;}
 }
 #reason label:has(:checked) {
   background-color:var(--header-background);
@@ -75,7 +79,10 @@ textarea {
 input.error, select.error, textarea.error {
   border:2px solid var(--field-border-error);
 }
-#contact-form button {background-color:var(--header-background);}
+#contact-form button {
+  background-color:var(--header-background);
+  max-width:max(33%, 240px);
+}
 button[disabled] {
   background:gray!important;
   cursor:not-allowed;
