@@ -46,6 +46,7 @@
   margin-left:-0.8em;
   margin-right:5px;
 }
+#footer a i {display:none;}
 
 /* form */
 #footer #contact {
