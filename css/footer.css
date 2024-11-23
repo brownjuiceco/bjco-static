@@ -67,26 +67,28 @@
   position:relative;
   margin:.5em 0;
 }
-#footer form input::empty {
-  content:'email@address.com';
-  color:#ccc;
-  text-decoration:italic;
-}
 #footer form input {
   border:2px solid var(--highlight);
   border-radius:10px;
   font-size:1em;
-  padding:6px;
+  padding:8px;
   width:calc(100% - 14px);
 }
-#footer-email img {
-  filter:saturate(0);
-  transition:filter 100ms ease;
-
-  max-width:1.8em;
+#footer form input::placeholder {
+  color:#ccc;
+  font-weight:300;
+}
+a#footer-email {
+  margin:0;
   position:absolute;
   top:.1em;
   right:.1em;
+}
+#footer-email img {
+  display:block;
+  filter:saturate(0);
+  transition:filter 100ms ease;
+  max-width:1.8em;
 }
 #footer form input.valid + a img {
   filter:saturate(100%);

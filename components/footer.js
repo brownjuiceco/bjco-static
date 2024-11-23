@@ -38,7 +38,7 @@ class footer extends HTMLElement {
         <div class="flex-col" id="contact">
           <h5>Get in touch!</h5>
           <form>
-            <input type="email" name="email">
+            <input type="email" name="email" placeholder="email@address.com">
             <a id="footer-email">
               <img src="images/global/paper-plane.png" alt="send message"/>
             </a>
