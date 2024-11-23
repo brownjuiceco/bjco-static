@@ -17,15 +17,14 @@
     --yellow-hover:color(srgb 0.98 0.7921 0.2401 / 0.37)
   }
 }
-form {
+#contact-form form {
   font-size:.85em;
 
   display:flex;
   flex-direction:column;
-  max-width:500px;
   gap:1rem;
 }
-input, select, textarea, #reason {
+#contact-form input, #contact-form select, #contact-form textarea, #reason {
   background-color:var(--background-primary);
   border:2px solid var(--field-border);
   border-radius:8px;
@@ -33,16 +32,16 @@ input, select, textarea, #reason {
   font-size:1em;
   padding:0.5rem;
 }
-input:placeholder-shown, select:placeholder-shown, textarea:placeholder-shown {
+#contact-form input:placeholder-shown, #contact-form select:placeholder-shown, #contact-form textarea:placeholder-shown {
   background-color:var(--field-background);
 }
-input:focus, select:focus, textarea:focus {
+#contact-form input:focus, #contact-form select:focus, #contact-form textarea:focus {
   background-color:var(--background-primary);
   border-color:var(--field-border-error);
   outline:3px solid var(--outline-color);
   outline-offset:0;
 }
-textarea {
+#contact-form textarea {
   resize:vertical;
   line-height:1.5em;
 }
@@ -76,14 +75,14 @@ textarea {
   color:var(--field-border-error);
   font-size:0.9rem;
 }
-input.error, select.error, textarea.error {
+#contact-form input.error, #contact-form select.error, #contact-form textarea.error {
   border:2px solid var(--field-border-error);
 }
 #contact-form button {
   background-color:var(--header-background);
   max-width:max(33%, 240px);
 }
-button[disabled] {
+#contact-form button[disabled] {
   background:gray!important;
   cursor:not-allowed;
 }
