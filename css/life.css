@@ -1,7 +1,7 @@
 @import url('header.css');
 /*@import url('life-be-excellent.css');*/
 /*@import url('life-make-magic.css');*/
-/*@import url('life-no-office.css');*/
+@import url('life-no-office.css');
 /*@import url('life-be-passionate.css');*/
 
 #logo {display:none;}
@@ -40,125 +40,7 @@
 #make-magic {}
 
 
-#no-office .content {
-  background-image:linear-gradient(#FFDBD7, #FFF1E7);
-  border-radius:50px;
-  box-shadow:0 8px 14px hsl(0,32,64,0.18);
-  color:#F28E8A;
 
-  display:flex;
-  flex-flow:column;
-  position:relative;
-
-  max-width:calc(90vw - 10%);
-  padding:40px 5%;
-  margin:40px auto;
-}
-@media(prefers-color-scheme:dark) {
-  #no-office .content {
-    background-image:linear-gradient(#b15753, #9e7f49);
-    color:#b15753;
-  }
-}
-#no-office .content::before {
-  content:'';
-  background-color:var(--background-primary);
-  background-image:url('../images/life/no-office-bubbles.svg');
-  background-size:auto 70%;
-  background-repeat:no-repeat;
-  background-position:70% 50%;
-
-  border-radius:44px;
-  position:absolute;
-  inset:8px 8px 22px 8px;
-}
-@media(prefers-color-scheme:dark) {
-  #no-office .content::before {
-    background-image:url('../images/life/no-office-bubbles-dark.svg');
-  }
-}
-#no-office .content > div {
-  display:flex;
-  flex-flow:column;
-  justify-content:stretch;
-  align-items:flex-start;
-
-  position:relative;
-  z-index:1;
-}
-#no-office .content .title {
-  font-size:60px;
-  padding:.5em 0;
-}
-#no-office .title h3 {
-  line-height:1em;
-  margin:0;
-}
-#no-office .title br {display:none;}
-#no-office .description {
-
-  padding-bottom:24px;
-}
-#no-office .description ol {
-  font-size:1.9em;
-  font-weight:700;
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-#no-office .description li {
-  margin:0 0 .1em;
-  text-indent:-1.525em;
-  padding-left:1.525em;
-}
-#no-office .description p {
-  font-size:1.2em;
-  margin-top:-0.1em;
-}
-@media(min-width:600px){
-  #no-office .content::before {
-    border-radius:38px;
-    inset:12px 12px 32px 12px;
-  }
-}
-@media(min-width:900px){
-  #no-office .content {flex-flow:row;}
-  #no-office .content::before {background-image:none;}
-  #no-office .content > div {
-    width:50%;
-    justify-content:center;
-    align-items:center;
-  }
-  #no-office .content .title {
-    font-size:3em;
-    padding:.9em 0;
-    padding:1.4em 0 1.8em;
-  }
-  #no-office .content .title br {display:block;}
-  #no-office .content .title h3 {}
-  #no-office .description {
-    background-image:url('../images/life/no-office-bubbles.svg');
-    background-size:auto 70%;
-    background-repeat:no-repeat;
-    background-position:center;
-  }
-  #no-office .description ol {font-size:1.6em;}
-  #no-office .description p {margin-bottom:-1.8em;}
-}
-@media(min-width:900px) and (prefers-color-scheme:dark){
-  #no-office .description {
-    background-image:url('../images/life/no-office-bubbles-dark.svg');
-  }
-}
-@media(min-width:1200px){
-  #no-office .content {max-width:var(--container-max);}
-  #no-office .content .title {
-    font-size:3.5em;
-    padding:1.4em 0 1.6em;
-  }
-  #no-office .description ol {font-size:1.9em;}
-  #no-office .description p {margin-top:-0.2em;}
-}
 
 
 #be-passionate {}

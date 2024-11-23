@@ -84,7 +84,10 @@
   <section id="be-passionate" class="contain">
     <div class="flex-col-row">
       <div class="image-container">
-        <div class="passion">
+        <div class="passion animated">
+          <picture>
+            <!-- <source srcset="images/life/passion-bird-dark.png" media="(prefers-color-scheme:dark)"> -->
+            <img src="images/life/passion-bird.png" alt="" />
           </picture>
         </div>
       </div>
@@ -100,7 +103,7 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $('#be-passionate').on('click', function() {
-      $('.passion').toggleClass('animated');
+      // $('.passion').toggleClass('animated');
     })
     // $(".headline-img").addClass("shadow");
   });
