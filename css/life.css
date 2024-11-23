@@ -42,8 +42,6 @@
 
 
 
-
-#be-passionate {}
 #be-passionate .passion {
   background-image:none;
   background-size:contain;
@@ -64,4 +62,24 @@
 }
 #be-passionate .passion.animated picture{
   opacity:0;
+}
+
+@media(min-width:768px){
+  #be-passionate {margin-top:120px;}
+  #be-passionate .passion {margin-top:-100px;}
+  #be-passionate .flex-col-row > div {
+    display:flex;
+    flex-flow:column;
+    justify-content:center;
+  }
+  #be-passionate .image-container {
+    align-items:center;
+    padding:0 1% 0 7%;
+    width:40%;
+    min-width:320px;
+  }
+  #be-passionate .description {
+    align-items:flex-start;
+    width:40%;
+  }
 }

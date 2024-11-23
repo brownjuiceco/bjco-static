@@ -10,7 +10,7 @@
 
   max-width:calc(90vw - 10%);
   padding:40px 5%;
-  margin:40px auto;
+  margin:40px auto 0;
 }
 @media(prefers-color-scheme:dark) {
   #no-office .content {
