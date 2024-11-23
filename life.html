@@ -34,11 +34,20 @@
 
   <section id="be-excellent" class="contain">
     <div class="flex-row">
-      <div>
+      <div class="description">
         <h3>We Are Excellent<emoji-img data-emoji="flex"></emoji-img></h3>
         <p>Our team is composed of software designers and engineers with decades of experience across the industry, including people from Apple, Google, Amazon, and more.</p>
       </div>
+      <div class="image-container">
+        <picture>
+          <source srcset="images/life/spinning-logo-gray.png" media="(prefers-color-scheme:dark)">
+          <img src="images/life/spinning-logo.png" alt="" />
+        </picture>
+      </div>
     </div>
+  </section>
+
+  <section id="img-divider">
   </section>
 
   <section id="make-magic" class="contain">
@@ -57,23 +66,27 @@
   <section id="no-office" class="contain">
     <div class="content">
       <div class="title">
-        <h3>No-Office Culture</h3>
+        <h3>No-Office <br />Culture</h3>
       </div>
       <div class="description">
-        <ol>
-          <li>No bullsh*t</li>
-          <li>No micromanagement</li>
-          <li>No dress code</li>
-        </ol>
-        <p>work wherever, whenever.</p>
+        <div>
+          <ol>
+            <li>No bullsh*t</li>
+            <li>No micro&shy;management</li>
+            <li>No dress code</li>
+          </ol>
+          <p>work wherever, whenever.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="be-passionate" class="contain">
-    <div class="flex-row">
-      <div class="anim-container">
-        <!-- middle-finger -->
+    <div class="flex-col-row">
+      <div class="image-container">
+        <div class="passion">
+          </picture>
+        </div>
       </div>
       <div class="description">
         <h3>We Value Passion<emoji-img data-emoji="fuming"></emoji-img></h3>
@@ -85,9 +98,12 @@
 
   <global-footer></global-footer>
 <script type="text/javascript">
-  // $(document).ready(function(){
-  //   $(".headline-img").addClass("shadow");
-  // });
+  $(document).ready(function(){
+    $('#be-passionate').on('click', function() {
+      $('.passion').toggleClass('animated');
+    })
+    // $(".headline-img").addClass("shadow");
+  });
 </script>
 </body>
 </html>
