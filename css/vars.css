@@ -16,6 +16,7 @@
   --text-primary:black;
   --text-strong:black;
   --text-secondary:#35576C;
+  --field-placeholder:#ccc;
   --highlight:#FF5015;
 
   --header-background:#F9CA3D;
@@ -28,6 +29,7 @@
     --text-primary:#dfdfe4;
     --text-strong:white;
     --text-secondary:#b6c5cf;
+    --field-placeholder:#666;
     --highlight:#FF5015;
 
     --background-primary:#1c1c1c;

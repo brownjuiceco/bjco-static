@@ -76,7 +76,7 @@
   width:calc(100% - 14px);
 }
 #footer form input::placeholder {
-  color:#ccc;
+  color:var(--field-placeholder);
   font-weight:300;
 }
 a#footer-email {
