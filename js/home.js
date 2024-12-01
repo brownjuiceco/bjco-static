@@ -14,14 +14,14 @@ function buildAnimation() {
   const img = $('#ds-experts .anim-container .positioned.anim img');
   const offset = 0; // .02;
   const startingPos = img.height() * (.5 + offset) * -1;
-  const endingPos = img.height() * (0 + offset) * -1;
+  const endingPos = img.height() * (0 + offset)are * -1;
 
   $('style[name="animation-container"]').remove();
   $('body').append($(
     `<style type="text/css" name="animation-container">
       :root {
-        --startingPos: ${startingPos};
-        --endingPos: ${endingPos};
+        --startingPos: ${startingPos}px;
+        --endingPos: ${endingPos}px;
       }
     </style>`
   ));

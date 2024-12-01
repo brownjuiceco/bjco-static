@@ -104,8 +104,8 @@
     animation-fill-mode:forwards;
   }
   @keyframes iconsLoop {
-    from {transform:translate3d(0, calc(var(--startingPos) * 1px), 0);}
-    to {transform:translate3d(0, calc(var(--endingPos) * 1px), 0);}
+    from {transform:translate3d(0, var(--startingPos), 0);}
+    to {transform:translate3d(0, var(--endingPos), 0);}
   }
   #ds-experts .description {margin-top:-90px;}
 }
