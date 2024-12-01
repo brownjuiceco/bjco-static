@@ -9,39 +9,27 @@
   #logo {display:inline-block;}
 }
 
-#be-excellent .description {
-  padding-top:100px;
-  max-width:min(80%, 600px);
+
+/* weird name */
+#weird-name {}
+
+
+/* full-width divider */
+#img-divider {
+  background-color:#E6B7B328;
+  min-height:80px;
+  margin:160px auto 60px;
 }
-#be-excellent .image-container {
-  margin-top:-40px;
-  position:relative;
-  text-align:center;
-}
-#be-excellent .image-container picture,
-#be-excellent .image-container img {
-  display:inline-block;
-}
-#be-excellent .image-container img {
-  max-width:80%;
-  animation:slow-spin 30s;
-  animation-timing-function:linear;
-  animation-iteration-count:infinite;
-  animation-fill-mode:forwards;
-  }
-  @keyframes slow-spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(-359.9deg);}
-  }
+#img-divider img {
+  margin-top:-160px;
+  max-width:220px;
 }
 
 
-
-#make-magic {}
-
+/* no office */
 
 
-
+/* be passionate */
 #be-passionate .passion {
   background-image:none;
   background-size:contain;
