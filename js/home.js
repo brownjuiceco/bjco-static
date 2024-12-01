@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 function buildAnimation() {
   const img = $('#ds-experts .anim-container .positioned.anim img');
-  const offset = .02;
+  const offset = 0; // .02;
   const startingPos = img.height() * (.5 + offset) * -1;
   const endingPos = img.height() * (0 + offset) * -1;
 

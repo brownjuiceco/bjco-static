@@ -92,7 +92,7 @@
     mask-mode:match-source;
   }
   #ds-experts .anim-container .anim img {
-    opacity: 0.5;
+/*    opacity:0.5;*/
     inset:0;
     max-width:100%;
 
@@ -105,7 +105,7 @@
   }
   @keyframes iconsLoop {
     from {transform:translate3d(0, calc(var(--startingPos) * 1px), 0);}
-    to {transform:translate3d(0, calc(var(--endingPos) * 1px + 5px), 0);}
+    to {transform:translate3d(0, calc(var(--endingPos) * 1px), 0);}
   }
   #ds-experts .description {margin-top:-90px;}
 }
