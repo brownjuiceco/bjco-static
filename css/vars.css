@@ -24,7 +24,7 @@
   --header-background:#F9CA3D;
   --background-primary:white;
   --background-primary-transparent:#ffffff00;
-
+  --paper-color:#F4F2F0;
 }
 @media(prefers-color-scheme:dark) {
  :root {
@@ -36,6 +36,7 @@
 
     --background-primary:#1c1c1c;
     --background-primary-transparent:#1c1c1c00;
+    --paper-color:#2D2D2D;
   }
 }
 

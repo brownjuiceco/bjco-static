@@ -11,7 +11,7 @@
   --shadow-color:black;
   border:2px solid var(--border-color);
   border-radius:40px;
-  box-shadow:5px 5px 0 var(--shadow-color), 10px 10px 0 var(--shadow-color), 15px 15px 0 var(--shadow-color), 20px 20px 0 var(--shadow-color);
+  box-shadow:5px 5px 0 var(--shadow-color), 10px 10px 0 var(--shadow-color), 15px 15px 0 var(--shadow-color), 20px 20px 0 var(--shadow-color), inset 0 0 0 2px var(--border-color);
 
   aspect-ratio:1;
   width:100%;
