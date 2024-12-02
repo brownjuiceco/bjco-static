@@ -1,0 +1,32 @@
+#ghost-engineers > div {
+  gap:var(--col-gap);
+  align-items:center;
+  flex-direction:column-reverse;
+  margin-top:calc(var(--col-gap) * 2);
+}
+#ghost-engineers .video-container {text-align:center;}
+#ghost-engineers iframe {
+  border-radius:12px;
+  aspect-ratio:calc(560 / 315);
+  width:calc(100vw - var(--container-padding)*2);
+  height:auto;
+}
+@media(min-width:768px) {
+  #ghost-engineers > div {
+    align-items:flex-start;
+    flex-flow:row;
+  }
+  #ghost-engineers .video-container {
+    padding-top:2em;
+    width:calc(50% - var(--col-gap)/2);
+  }
+  #ghost-engineers .description {width:calc(50% - var(--col-gap)/2);}
+  #ghost-engineers iframe {width:-webkit-fill-available;}
+}
+@media(min-width:992px) {
+  #ghost-engineers .video-container {
+    padding-top:1.5em;
+    width:calc(40% - var(--col-gap)/2);
+  }
+  #ghost-engineers .description {width:calc(60% - var(--col-gap)/2);}
+}

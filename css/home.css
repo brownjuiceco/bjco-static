@@ -2,8 +2,8 @@
 @import url('home-ds-experts.css');
 @import url('home-good-company.css');
 @import url('home-billions.css');
-/*@import url('home-ghost-engineers.css');*/
-/*@import url('home-try-us.css');*/
+@import url('home-ghost-engineers.css');
+@import url('home-try-us.css');
 @import url('home-holistic.css');
 /*@import url('home-good-great.css');*/
 
@@ -12,103 +12,54 @@
   #logo {display:inline-block;}
 }
 
-#ghost-engineers {}
-#ghost-engineers > div {
-  gap:var(--col-gap);
-  align-items:center;
-  flex-direction:column-reverse;
-  margin-top:calc(var(--col-gap) * 2);
+
+#good-great {
+  margin-top:var(--container-padding);
+  padding:var(--container-padding) 0;
 }
-#ghost-engineers .video-container {text-align:center;}
-#ghost-engineers iframe {
-  border-radius:12px;
-  aspect-ratio:calc(560 / 315);
-  width:calc(100vw - var(--container-padding)*2);
-  height:auto;
-}
-@media(min-width:768px) {
-  #ghost-engineers > div {
-    align-items:flex-start;
-    flex-flow:row;
-  }
-  #ghost-engineers .video-container {
-    padding-top:2em;
-    width:calc(50% - var(--col-gap)/2);
-  }
-  #ghost-engineers .description {width:calc(50% - var(--col-gap)/2);}
-  #ghost-engineers iframe {width:-webkit-fill-available;}
-}
-@media(min-width:992px) {
-  #ghost-engineers .video-container {
-    padding-top:1.5em;
-    width:calc(40% - var(--col-gap)/2);
-  }
-  #ghost-engineers .description {width:calc(60% - var(--col-gap)/2);}
-}
-
-
-
-
-#try-us {
-  margin-top:var(--col-gap);
-}
-#try-us > div {
-  gap:calc(var(--col-gap) * 2);
-  align-items:center;
-}
-#try-us .image-container {display:none;}
-#try-us img {
-  --border-color:black;
-  --shadow-color:black;
-  border:2px solid var(--border-color);
-  border-radius:40px;
-  box-shadow:5px 5px 0 var(--shadow-color), 10px 10px 0 var(--shadow-color), 15px 15px 0 var(--shadow-color), 20px 20px 0 var(--shadow-color);
-
-  aspect-ratio:1;
-  width:100%;
-  width:-webkit-fill-container;
-  height:auto;
-
-  transform:rotate(-5.12deg);
-  animation:rocking 6s;
-  animation-iteration-count:infinite;
-}
-@media(prefers-color-scheme:dark) {
-  #try-us img {
-    --border-color:var(--header-background);
-    --shadow-color:var(--highlight);
-  }
-}
-@keyframes rocking {
-  0% {transform:rotate(-5.12deg);}
-  30% {transform:rotate(-3.2deg);}
-  80% {transform:rotate(-5.12deg);}
-}
-@media(min-width:768px) {
-  #try-us .image-container {
-    display:flex;
-    flex-flow:column;
-    justify-content:flex-start;
-    padding-right:var(--container-padding);
-    align-items:center;
-    width:calc(50% - var(--col-gap)/2);
-  }
-  #try-us .description {width:calc(50% - var(--col-gap)/2);}
-}
-@media(min-width:992px) {
-  #try-us .image-container {width:calc(33% - var(--col-gap)/2);}
-  #try-us .description {width:calc(66% - var(--col-gap)/2);}
-}
-
-
-
-
-
-
 #good-great > div {
-  align-items:center;
+  align-items:start;
   justify-content:center;
+  position:relative;
 }
+#good-great h4 {
+  font-size:1.4em;
+  margin:0.8em 0;
+}
+#good-great strong {color:var(--highlight);}
 #good-great p {
-  width:max-content;
+  margin:0;
+  line-height:140%;
+}
+#good-great p:last-child {max-width:600px;}
+#good-great p:last-child::after {
+  content:'';
+  width:min(20vw, 120px);
+  height:min(20vw, 120px);
+  background-image:url(../images/emoji/peace.png);
+  background-size:contain;
+
+  position:absolute;
+  z-index:-1;
+  bottom:-70px;
+  right:30px;
+}
+#good-great a {font-weight:600;}
+
+@media(min-width:540px) {
+  #good-great p:last-child {margin-bottom:60px;}
+}
+@media(min-width:768px) {
+  #good-great p {width:max-content;}
+  #good-great p:last-child {margin-bottom:40px;}
+  #good-great p:last-child::after {
+    bottom:-100px;
+    right:0;
+    bottom:-80px;
+  }
+}
+@media(min-width:800px) {
+  #good-great > div {width:max-content;}
+  #good-great p:last-child {margin-bottom:0;}
+  #good-great p:last-child::after {right:-40px;}
 }
