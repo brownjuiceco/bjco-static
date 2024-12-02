@@ -40,7 +40,7 @@ class footer extends HTMLElement {
           <form>
             <input type="email" name="email" placeholder="email@address.com">
             <a id="footer-email">
-              <img src="images/global/paper-plane.png" alt="send message"/>
+              <img src="images/global/paper-airplane.png" alt="send message"/>
             </a>
             <p>Questions, comments, new projects, or anything else that&#8217;s on your mind.</p>
           </form>
