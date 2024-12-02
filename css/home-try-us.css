@@ -1,6 +1,4 @@
-#try-us {
-  margin-top:var(--col-gap);
-}
+#try-us {margin-top:var(--col-gap);}
 #try-us > div {
   gap:calc(var(--col-gap) * 2);
   align-items:center;
@@ -15,7 +13,8 @@
 
   aspect-ratio:1;
   width:100%;
-  width:-webkit-fill-container;
+  width:-webkit-fill-available;
+  max-width:350px;
   height:auto;
 
   transform:rotate(-5.12deg);
@@ -45,6 +44,7 @@
   #try-us .description {width:calc(50% - var(--col-gap)/2);}
 }
 @media(min-width:992px) {
+  #try-us {margin-top:calc(var(--col-gap) * 2);}
   #try-us .image-container {width:calc(33% - var(--col-gap)/2);}
   #try-us .description {width:calc(66% - var(--col-gap)/2);}
 }

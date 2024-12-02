@@ -1,5 +1,5 @@
 #holistic-approach {
-  padding-top:120px;
+  padding-top:80px;
 }
 #holistic-approach .image-container {
   display:flex;
@@ -72,6 +72,7 @@
   #holistic-approach .description {margin-top:-90px;}
 }
 @media(min-width:768px) {
+  #holistic-approach {margin-top:var(--col-gap);}
   #holistic-approach .image-container {
     display:block;
     padding-right:20px;
@@ -108,7 +109,8 @@
   }
 }
 
-@media(min-width:1000px) {
+@media(min-width:992px) {
+  #holistic-approach {margin-top:calc(var(--col-gap) * 2);}
   #holistic-approach .description {
     margin-top:-20px;
   }
