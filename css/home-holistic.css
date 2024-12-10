@@ -27,9 +27,12 @@
   max-width:min(80%, 80vw);
   margin:0;
   transform:rotate(-3.5deg);
-/*  transition-timing-function:ease-in;*/
-/*  transition-duration:.5s;*/
-/*  transition-property:transform, margin-top, margin-left;*/
+}
+#holistic-approach.animating .image-container img,
+#holistic-approach.animating .overlaid img {
+  transition-timing-function:ease-in;
+  transition-duration:.5s;
+  transition-property:transform, margin-top, margin-left;
 }
 
 #holistic-approach.animated .image-container img {

@@ -8,6 +8,24 @@ $(document).ready(function() {
   // set up animation
   buildAnimation();
   $(window).on('resize', buildAnimation);
+
+  // animate "holistic" element
+  const holistic = $('#holistic-approach');
+  $(window).on('scroll', function() {
+    let top = holistic[0].getBoundingClientRect().top;
+    // short-circuit if section is off-screen
+    if (top > window.innerHeight || top < 0) return;
+
+    if (top <= window.innerHeight * .7) {
+      holistic.addClass('animating animated');
+      $(window).off('scroll');
+
+      window.setTimeout(function() {
+        holistic.removeClass('animating');
+      }, 550);
+    }
+  });
+
 });
 
 function buildAnimation() {
@@ -26,3 +44,4 @@ function buildAnimation() {
     </style>`
   ));
 }
+
