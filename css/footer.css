@@ -1,10 +1,10 @@
 #footer {
   background-color:#FFCFAB;
-  background-image:url('../images/global/footer-squiggle-light.svg'), url('../images/global/footer-grid-light.png'), linear-gradient(#FFE8E3 0%, #FFCFAB 100%);
-  background-size:56px 47px, calc(323px / 3) calc(501px/3), cover;
-  background-repeat:repeat-x, repeat, no-repeat;
+  background-image:url('../images/global/footer-squiggle-light.svg'), linear-gradient(#f5f1e8, #ffffff);
+  background-size:56px 47px, cover;
+  background-repeat:repeat-x, no-repeat;
   background-position:top center;
-  background-blend-mode:normal, soft-light, normal;
+  background-blend-mode:normal, normal;
   overflow:hidden;
 
 
@@ -116,7 +116,7 @@ a#footer-email {
 @media(prefers-color-scheme:dark) {
   #footer {
     background-color:black;
-    background-image:url('../images/global/footer-squiggle-dark.svg'), url('../images/global/footer-grid-dark.png'), linear-gradient(#FFE8E30A 0%, #FFCFAB0A 100%);
+    background-image:url('../images/global/footer-squiggle-dark.svg'), linear-gradient(#131313 0%, #191919 100%);
     background-blend-mode:normal;
     color:inherit;
   }
