@@ -1,17 +1,3 @@
-@import url('header.css');
-@import url('home-ds-experts.css');
-@import url('home-good-company.css');
-@import url('home-billions.css');
-@import url('home-ghost-engineers.css');
-@import url('home-try-us.css');
-@import url('home-holistic.css');
-@import url('home-good-great.css');
-
-#logo {display:none;}
-@media (min-width:430px) {
-  #logo {display:inline-block;}
-}
-
 #good-great {
   margin:calc(var(--container-padding) * 6) var(--container-padding) calc(var(--container-padding) * 5);
   width:auto;
