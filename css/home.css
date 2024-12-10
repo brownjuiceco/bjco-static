@@ -101,7 +101,6 @@
   }
   #good-great > div::before,
   #good-great > div::after {
-    background-size:contain;
     aspect-ratio:0.1420863309;
     inset:unset;
     top:0;
