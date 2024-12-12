@@ -71,17 +71,23 @@ class footer extends HTMLElement {
   }
 
   setActive() {
-    const url = window.location.href;
+    const path = window.location.pathname;
     const links = $('#sitemap a[href]').toArray();
 
-    for (let i = 0; i < links.length; i++) {
+    if (path === '') { path = 'index.html'; }
+
+    for (var i = 0; i < links.length; i++) {
       let href = $(links[i]).attr('href');
-      if (url.includes(href)) {
+
+      if (path.includes('contact.html')) {
+        $('#footer #contact').hide();
+      }
+
+      if (path.includes(href)) {
         $(links[i]).addClass('you-are-here');
+        i = links.length;
       }
-      if (url.includes('contact.html')) {
-        $('#footer #contact').hide()
-      }
+
     }
   }
 
