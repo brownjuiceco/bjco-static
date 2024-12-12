@@ -74,7 +74,7 @@ class footer extends HTMLElement {
     const path = window.location.pathname;
     const links = $('#sitemap a[href]').toArray();
 
-    if (path === '') { path = 'index.html'; }
+    if (!path) { path = 'index.html'; }
 
     for (var i = 0; i < links.length; i++) {
       let href = $(links[i]).attr('href');
