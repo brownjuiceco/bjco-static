@@ -15,11 +15,12 @@
 
 /* COLORS */
 :root {
-  --text-primary:black;
+  --text-primary:black; /* #4F5059 */
   --text-strong:black;
   --text-secondary:#35576C;
   --field-placeholder:#ccc;
   --highlight:#FF5015;
+  --you-are-here:#2ABA70;
 
   --header-background:#F9CA3D;
   --background-primary:white;
@@ -33,6 +34,7 @@
     --text-secondary:#b6c5cf;
     --field-placeholder:#666;
     --highlight:#FF5015;
+    --you-are-here:#F9CA3D;
 
     --background-primary:#1c1c1c;
     --background-primary-transparent:#1c1c1c00;

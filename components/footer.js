@@ -2,6 +2,8 @@ class footer extends HTMLElement {
   constructor() {
     super();
     this.render();
+    this.bindEvents();
+    this.setActive();
   }
 
   render() {
@@ -45,8 +47,8 @@ class footer extends HTMLElement {
             <p>Questions, comments, new projects, or anything else that&#8217;s on your mind.</p>
           </form>
           <picture class="bg">
-            <source srcset="images/global/footer-blob-dark.svg" media="(prefers-color-scheme:dark)">
-            <img src="images/global/footer-blob-light.svg" alt=""/>
+            <source srcset="images/global/footer-typewriter-dark.png" media="(prefers-color-scheme:dark)">
+            <img src="images/global/footer-typewriter-light.png" alt=""/>
           </picture>
         </div>
       </div>
@@ -57,8 +59,6 @@ class footer extends HTMLElement {
     </div>
   </footer>
     `;
-    this.setActive();
-    this.bindEvents();
   }
 
   bindEvents() {
@@ -74,10 +74,13 @@ class footer extends HTMLElement {
     const url = window.location.href;
     const links = $('#sitemap a[href]').toArray();
 
-    for (let i; i < links.length; i++) {
+    for (let i = 0; i < links.length; i++) {
       let href = $(links[i]).attr('href');
       if (url.includes(href)) {
         $(links[i]).addClass('you-are-here');
+      }
+      if (url.includes('contact.html')) {
+        $('#footer #contact').hide()
       }
     }
   }
