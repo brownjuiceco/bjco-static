@@ -71,22 +71,27 @@ class footer extends HTMLElement {
   }
 
   setActive() {
-    const path = window.location.pathname;
+    var path = window.location.pathname;
     const links = $('#sitemap a[href]').toArray();
 
-    if (path === '/') { path = 'index.html'; }
 
     for (var i = 0; i < links.length; i++) {
       let href = $(links[i]).attr('href');
 
-      if (path.includes('contact.html')) {
+      if (path === '/') {
+        $('#sitemap').find('a[href="index.html"]').addClass('you-are-here');
+        i = links.length;
+      } else
+        if (path.includes('contact.html')) {
+        $('#sitemap').find('a[href="contact.html"]').addClass('you-are-here');
         $('#footer #contact').hide();
-      }
-
-      if (path.includes(href)) {
+        i = links.length;
+      } else
+        if (path.includes(href)) {
         $(links[i]).addClass('you-are-here');
         i = links.length;
       }
+
 
     }
   }
