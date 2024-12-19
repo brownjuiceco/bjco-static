@@ -1,4 +1,7 @@
-#ds-experts {position:relative;}
+#ds-experts {
+  position:relative;
+  padding-top:10px;
+}
 #ds-experts em {font-weight:bold;font-style:normal;}
 #ds-experts em {font-weight:bold;font-style:normal;}
 #ds-experts .flex-row {

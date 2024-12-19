@@ -5,7 +5,7 @@
   background-size:contain;
   background-repeat:no-repeat;
   background-position-x:10px;
-  padding-bottom:110px;
+  padding-bottom:90px;
 }
 @media(prefers-color-scheme:dark) {
   #billions .content{
