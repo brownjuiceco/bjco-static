@@ -22,9 +22,6 @@ h3 b {display:inline-block;}
   gap:0;
 }
 #no-nonsense b {display:inline;}
-@media(prefers-color-scheme:dark) {
-  #no-nonsense img {opacity:.9;}
-}
 @media(min-width:530px) {
   #no-nonsense {padding-top:30px;}
   #no-nonsense .flex-row {display:block;}
@@ -53,6 +50,7 @@ h3 b {display:inline-block;}
   }
 }
 @media(min-width:965px) {
+  #no-nonsense .flex-row {margin-top:-80px;}
   #no-nonsense .image-container {margin-left:0;}
 }
 @media(min-width:1100px) {
