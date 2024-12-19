@@ -100,6 +100,8 @@ class NavBar extends HTMLElement {
       // navigate to page
       if (hash) {
         window.location.href = url+'#'+hash;
+      } else {
+        window.location.href = url;
       }
     });
   }
