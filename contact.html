@@ -25,58 +25,81 @@
     <div id="content">
       <img class="headline-img" src="images/global/logo-header.png" alt="Brown Juice Co" />
       <h2 class="body-font" data-lang="en">Legendary <b>Design and Marketing</b> <span class="i-block">from Tokyo</span></h2>
+      <h2 class="body-font" data-lang="jp">東京発の伝説的な<b>デザイン</b>と<b>マーケティング</b></h2>
     </div>
   </header>
 
   <section id="overview" class="contain">
     <div class="description">
-      <h2 id="contactFormLabel" data-lang="en">Contact Us <emoji-img data-emoji="wave"></emoji-img></h2>
+      <h2 id="contactFormLabel">
+        <span data-lang="en">Contact Us</span>
+        <span data-lang="jp">お問い合わせ</span>
+        <emoji-img data-emoji="wave"></emoji-img>
+      </h2>
     </div>
   </section>
 
   <section id="contact-form" class="contain">
     <form id="contactForm" aria-labelledby="contactFormLabel">
-      <label for="reason" data-lang="en">Reason for Contact</label>
+      <label for="reason">
+        <span data-lang="en">Reason for Contact</span>
+        <span data-lang="jp">お問い合わせの理由</span>
+      </label>
       <div id="reason">
         <label>
           <input type="radio" name="reason" value="inquiry" checked hidden />
           <span data-lang="en">General Inquiry</span>
+          <span data-lang="jp">一般的なお問い合わせ</span>
         </label>
         <label>
           <input type="radio" name="reason" value="support" hidden />
           <span data-lang="en">Support</span>
+          <span data-lang="jp">サポートを要求する</span>
         </label>
         <label>
           <input type="radio" name="reason" value="feedback" hidden />
           <span data-lang="en">Feedback</span>
+          <span data-lang="jp">フィードバックを提供する</span>
         </label>
       </div>
       <div class="error-message" id="reasonError"></div>
 
-      <label for="name" data-lang="en">Name</label>
+      <label for="name">
+        <span data-lang="en">Name</span>
+        <span data-lang="jp">お名前</span>
+      </label>
       <input type="text" id="name" placeholder="Enter your name" />
       <div class="error-message" id="nameError"></div>
 
-      <label for="email" data-lang="en">Email Address</label>
+      <label for="email">
+        <span data-lang="en">Email Address</span>
+        <span data-lang="jp">電子メールアドレス</span>
+      </label>
       <input type="email" id="email" placeholder="Enter your email" />
       <div class="error-message" id="emailError"></div>
 
-      <label for="message" data-lang="en">Message</label>
+      <label for="message">
+        <span data-lang="en">Message</span>
+        <span data-lang="jp">メッセージ</span>
+      </label>
       <textarea id="message" rows="5.5" placeholder="Enter your message"></textarea>
       <div class="error-message" id="messageError"></div>
 
       <div id="captchaContainer" style="display:none;">
         <p data-lang="en">Please complete this CAPTCHA to proceed.</p>
+        <p data-lang="jp">続行するにはこの CAPTCHA を完了してください.</p>
         <input type="text" id="captchaQuestion" />
         <div class="error-message" id="captchaError"></div>
       </div>
       <button type="submit" class="shadow-button" id="sendButton" disabled>
         <span data-lang="en">Send</span>
+        <span data-lang="jp">送ります</span>
       </button>
     </form>
 
     <div id="messageSent" style="display:none;">
-      Message sent – we'll respond as soon as we can.
+      <p data-lang="en">Message sent – we'll respond as soon as we can.</p>
+      <p data-lang="jp">メッセージは送信されました。できるだけ早く返信いたします。</p>
     </div>
   </section>
 
