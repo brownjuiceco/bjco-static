@@ -5,6 +5,10 @@ class NavBar extends HTMLElement {
     super();
     this.render();
     this.checkUrlHash();
+
+    $(document).ready(function() {
+      $('.headline-img').addClass('shadow');
+    });
   }
 
   render() {
