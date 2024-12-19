@@ -69,9 +69,11 @@ a.trailing-arrow::after {
 }
 [class^='i-block'] {display:inline-block;}
 .inline {display:inline;}
-.i-block-768 {display:block;}
+.iblock {display:inline-block;}
+.i-iblock-768 {display:inline;}
+.block-iblock-768 {display:block;}
 @media (min-width:768px) {
-  .i-block-768 {display:inline-block;}
+  [class$="iblock-768"] {display:inline-block;}
 }
 
 .flex-row {
