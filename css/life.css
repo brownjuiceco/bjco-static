@@ -3,12 +3,6 @@
 @import url('life-no-office.css');
 /*@import url('life-be-passionate.css');*/
 
-#logo {display:none;}
-@media (min-width:430px) {
-  #logo {display:inline-block;}
-}
-
-
 /* weird name */
 #weird-name {}
 

@@ -75,25 +75,3 @@
     margin-top:-10px;
   }
 }
-
-#pipeline {text-align:center;}
-#pipeline h2 {
-  line-height:92%;
-  margin:0.6em auto 0.4em;
-  font-size:2em;
-}
-#pipeline h3 {
-  font-size:1.2em;
-  margin:0;
-}
-@media (min-width:768px) {
-  #pipeline h2 {
-    line-height:92%;
-    margin:0.6em auto 0.4em;
-    font-size:3.4em;
-  }
-  #pipeline h3 {
-    font-size:1.7em;
-    margin:0;
-  }
-}

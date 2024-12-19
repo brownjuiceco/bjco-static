@@ -4,11 +4,6 @@
 /*@import url('team-make-magic.css');*/
 /*@import url('team-network-affect.css');*/
 
-#logo {display:none;}
-@media (min-width:430px) {
-  #logo {display:inline-block;}
-}
-
 /* be excellent */
 #be-excellent .description {
   padding-top:100px;

@@ -7,8 +7,9 @@ nav-bar {
 #logo {
   padding-top:0.48rem;
   max-height:1.2rem;
-  display:inline-block;
+  display:none;
 }
+@media (min-width:430px) {#logo {display:inline-block;}}
 nav-bar sub-nav {display:none;}
 sub-nav {
   padding:0 3px;
