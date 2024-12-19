@@ -25,11 +25,10 @@ class SubNav extends HTMLElement {
   }
 
   localizeLinks() {
-    const newLanguage = window.location.hash.slice(1);
-    if (newLanguage) {
-      $('[data-lang]').hide();
-      $(`[data-lang="${newLanguage}"]`).show();
-    }
+    const newLanguage = window.location.hash.slice(1) || 'en';
+
+    $('[data-lang]').hide();
+    $(`[data-lang="${newLanguage}"]`).show();
   }
 }
 
