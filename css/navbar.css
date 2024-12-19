@@ -57,10 +57,16 @@ sub-nav > * {
 }
 
 
-@media (min-width:1000px) {
+@media (min-width:800px) {
   nav-bar sub-nav {
     display:flex;
-    padding:0 80px;
+    justify-content:space-evenly;
   }
   sub-nav {display:none;}
+}
+@media (min-width:1000px) {
+  nav-bar sub-nav {
+    justify-content:space-between;
+    padding:0 80px;
+  }
 }
