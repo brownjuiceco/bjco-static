@@ -60,7 +60,7 @@ class NavBar extends HTMLElement {
         this.changeLanguage(target, newLanguage);
 
         // Update URL hash without triggering a page reload
-        history.pushState(null, '', `#${newLanguage}`);
+        history.replaceState(null, '', `#${newLanguage}`);
       });
     });
 
