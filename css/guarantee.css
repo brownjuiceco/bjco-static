@@ -2,3 +2,8 @@
 /*@import url('guarantee-not-bluffing.css');*/
 /*@import url('guarantee-agencies-suck.css');*/
 /*@import url('guarantee-success-guaranteed.css');*/
+
+#not-bluffing {padding-top:10px;}
+@media(min-width:530px) {
+  #no-nonsense {padding-top:30px;}
+}

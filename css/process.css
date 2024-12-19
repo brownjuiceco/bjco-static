@@ -26,6 +26,7 @@ h3 b {display:inline-block;}
   #no-nonsense img {opacity:.9;}
 }
 @media(min-width:530px) {
+  #no-nonsense {padding-top:30px;}
   #no-nonsense .flex-row {display:block;}
   #no-nonsense .image-container {
     float:right;

@@ -12,6 +12,8 @@
   }
 }
 
+h3 {font-size:1.2em;}
+
 article a {
   color:var(--link);
   cursor:pointer;

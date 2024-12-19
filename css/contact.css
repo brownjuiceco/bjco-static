@@ -17,6 +17,15 @@
     --yellow-hover:color(srgb 0.98 0.7921 0.2401 / 0.37)
   }
 }
+
+#overview {
+  padding-top:10px;
+}
+@media(min-width:530px) {
+  #overview {padding-top:30px;}
+}
+
+
 #contact-form form {
   font-size:.85em;
 

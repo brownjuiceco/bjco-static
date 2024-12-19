@@ -1,10 +1,14 @@
 @import url('header.css');
+/*@import url('life-weird-name.css');*/
 @import url('life-freeloaders.css');
 @import url('life-no-office.css');
 /*@import url('life-be-passionate.css');*/
 
 /* weird name */
-#weird-name {}
+#weird-name {padding-top:30px;}
+@media(min-width:530px) {
+  #weird-name {padding-top:30px;}
+}
 
 
 /* full-width divider */
