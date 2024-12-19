@@ -5,6 +5,7 @@ class NavBar extends HTMLElement {
     super();
     this.render();
     this.checkUrlHash();
+    this.localizeLinks();
 
     $(document).ready(function() {
       $('.headline-img').addClass('shadow');
@@ -24,8 +25,8 @@ class NavBar extends HTMLElement {
       <div id="right">
         <!-- <i class="fa-regular fa-globe"></i> -->
         <div class="toggle">
-          <a data-lang="english" class="active">English</a>
-          <a data-lang="japanese">日本語</a>
+          <a data-language="en" class="active">English</a>
+          <a data-language="jp">日本語</a>
         </div>
       </div>
     `;
@@ -37,11 +38,14 @@ class NavBar extends HTMLElement {
     const hash = window.location.hash.slice(1);
     if (hash) {
       // Find the matching language option
-      const matchingOption = this.querySelector(`[data-lang="${hash}"]`);
+      const matchingOption = this.querySelector(`[data-language="${hash}"]`);
       if (matchingOption) {
         // Simulate a click on the matching option
         matchingOption.click();
       }
+    }
+    else {
+      this.changeLanguage(undefined, 'en');
     }
   }
 
@@ -52,7 +56,7 @@ class NavBar extends HTMLElement {
       option.addEventListener('click', (event) => {
         event.preventDefault();
         const target = event.target;
-        const newLanguage = target.getAttribute('data-lang');
+        const newLanguage = target.getAttribute('data-language');
         this.changeLanguage(target, newLanguage);
 
         // Update URL hash without triggering a page reload
@@ -67,16 +71,14 @@ class NavBar extends HTMLElement {
   }
 
   changeLanguage(clickedElement, newLanguage) {
-    if (clickedElement.classList.contains('active')) {
-      return;
+    if (clickedElement) {
+      // Remove active class from all language options
+      const languageOptions = this.querySelectorAll('.toggle a');
+      languageOptions.forEach(option => option.classList.remove('active'));
+
+      // Add active class to clicked element
+      clickedElement.classList.add('active');
     }
-
-    // Remove active class from all language options
-    const languageOptions = this.querySelectorAll('.toggle a');
-    languageOptions.forEach(option => option.classList.remove('active'));
-
-    // Add active class to clicked element
-    clickedElement.classList.add('active');
 
     // Emit a custom event for language change
     const event = new CustomEvent('languageChanged', {
@@ -84,6 +86,30 @@ class NavBar extends HTMLElement {
       bubbles: true
     });
     this.dispatchEvent(event);
+
+    $('[data-lang]').hide();
+    $(`[data-lang="${newLanguage}"]`).show();
+
+    // preserve language
+    $('body').on('click', 'a[href]', function(e) {
+      e.preventDefault();
+
+      var hash = window.location.hash.slice(1);
+      var url = $(e.target).attr('href') ?? $(e.target).parent().attr('href');
+
+      // navigate to page
+      if (hash) {
+        window.location.href = url+'#'+hash;
+      }
+    });
+  }
+
+  localizeLinks() {
+    const newLanguage = window.location.hash.slice(1);
+    if (newLanguage) {
+      $('[data-lang]').hide();
+      $(`[data-lang="${newLanguage}"]`).show();
+    }
   }
 }
 

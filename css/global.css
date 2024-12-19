@@ -67,6 +67,9 @@ a.trailing-arrow::after {
   padding-left:4px;
   transition:all ease 70ms;
 }
+
+[data-lang="jp"] {word-break:break-all;}
+
 [class^='i-block'] {display:inline-block;}
 .inline {display:inline;}
 .iblock {display:inline-block;}
