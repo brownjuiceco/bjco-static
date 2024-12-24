@@ -3,6 +3,13 @@
 @import url('footer.css');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* show english, default english */
+body[data-lang="en"] [data-lang="jp"] {display:none;}
+body:not([data-lang]) [data-lang="jp"] {display:none;}
+
+/* show japanese */
+body[data-lang="jp"] [data-lang="en"] {display:none;}
+
 .fat-b::before, .fat-a::after,
 .fal-b::before, .fal-a::after,
 .far-b::before, .far-a::after,

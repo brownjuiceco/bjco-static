@@ -4,7 +4,6 @@ class footer extends HTMLElement {
     this.render();
     this.bindEvents();
     this.setActive();
-    this.localizeLinks();
   }
 
   render() {
@@ -138,14 +137,6 @@ class footer extends HTMLElement {
       }
     }
   }
-
-  localizeLinks() {
-    const newLanguage = window.location.hash.slice(1) || 'en';
-
-    $('[data-lang]').hide();
-    $(`[data-lang="${newLanguage}"]`).show();
-  }
-
 }
 
 customElements.define('global-footer', footer);

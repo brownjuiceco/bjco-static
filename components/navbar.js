@@ -87,8 +87,7 @@ class NavBar extends HTMLElement {
     });
     this.dispatchEvent(event);
 
-    $('[data-lang]').hide();
-    $(`[data-lang="${newLanguage}"]`).show();
+    $('body').attr('data-lang', newLanguage);
 
     // preserve language
     $('body').on('click', 'a[href]', function(e) {
@@ -108,9 +107,7 @@ class NavBar extends HTMLElement {
 
   localizeLinks() {
     const newLanguage = window.location.hash.slice(1) || 'en';
-
-    $('[data-lang]').hide();
-    $(`[data-lang="${newLanguage}"]`).show();
+    $('body').attr('data-lang', newLanguage);
   }
 }
 
