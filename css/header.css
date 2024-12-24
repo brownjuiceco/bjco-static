@@ -81,11 +81,8 @@ header .buttons {
 }
 @media(prefers-color-scheme:dark) {
   #header + section::before {
-    background-image:url('../images/global/below-header-wedge-dark.svg');
-  }
-}
-@media(prefers-color-scheme:dark) and (min-width:1100px) {
-  #header + section::before {
-    background-image:url('../images/global/below-header-wedge-short-dark.svg');
+    background:unset;
+    position:unset;
+    height:12px;
   }
 }
