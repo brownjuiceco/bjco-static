@@ -53,7 +53,7 @@
     inset:0;
     position:absolute;
     overflow-y:hidden;
-    border-radius:6vw;
+    border-radius:20px;
     bottom:-400px;
   }
   .anim::before {
