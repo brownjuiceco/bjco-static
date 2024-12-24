@@ -6,7 +6,10 @@ class aArrow extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <a class="fas-a trailing-arrow ${this.getAttribute("data-classes")}" href="${this.getAttribute("data-url")}">${this.getAttribute("data-text")}</a>
+      <a class="fas-a trailing-arrow ${this.getAttribute("data-classes")}" href="${this.getAttribute("data-url")}">
+        <span data-lang="en">${this.getAttribute("data-text-en")}</span>
+        <span data-lang="jp">${this.getAttribute("data-text-jp")}</span>
+      </a>
     `;
   }
 }
