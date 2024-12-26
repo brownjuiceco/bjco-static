@@ -183,17 +183,14 @@ $(document).ready(function () {
     };
 
     // Simulate email sending
-    console.log('Sending email:', inquiry);
     sendMessage(inquiry);
-
-    // Clear Local Storage and Form Fields After Submission
-    localStorage.clear();
-    $form.hide();
-    $('#messageSent').show();
+    // console.log('Sending email:', inquiry);
   });
 });
 
 function sendMessage(inquiry) {
+  $form.hide();
+
   $.ajax({
     url: 'https://bjco-server-3d68e4a22d18.herokuapp.com/api/contact/mailer',
     type: 'POST',
@@ -209,12 +206,19 @@ function sendMessage(inquiry) {
         $form.trigger('reset').show();
       }, 8000);
 
+      localStorage.clear();
       submitting = false;
     },
     error: function(xhr, status, error) {
       console.log(xhr, status, error);
       /* TODO: Create failure alert */
-      $('#messageSent').html(`<p>There was a problem sending your message. Please send us an email instead. You can reach us at hello@brownjuice.co</p>`).show();
+      var errorMessage = '';
+      if (window.location.hash.slice(1) === 'jp') {
+        errorMessage = `メッセージの送信中に問題が発生しました。代わりにメールをお送りください。<a href="mailto:hello@brownjuice.co">hello@brownjuice.co</a>までご連絡ください。`;
+      } else {
+        errorMessage = `There was a problem sending your message. Please send us an email instead. You can reach us at <a href="mailto:hello@brownjuice.co">hello@brownjuice.co</a>`;
+      }
+      $('#messageSent').html(`<p>${errorMessage}</p>`).show();
 
       // show field content
       $submit.remove();
