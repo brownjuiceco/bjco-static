@@ -171,8 +171,8 @@ $(document).ready(function () {
   $form.on('submit', function (e) {
     e.preventDefault();
     if (!checkFormValidity(true)) return;
-    if (submitting) return;
-    submitting = true;
+    if (window.submitting) return;
+    window.submitting = true;
 
     const inquiry = {
       name: $name.val().trim(),
@@ -207,7 +207,7 @@ function sendMessage(inquiry) {
       }, 8000);
 
       localStorage.clear();
-      submitting = false;
+      window.submitting = false;
     },
     error: function(xhr, status, error) {
       console.log(xhr, status, error);
@@ -225,7 +225,7 @@ function sendMessage(inquiry) {
       $form.slideDown();
 
       // don't reset submitting flag
-      // submitting = true;
+      // window.submitting = true;
     }
   });
 }
