@@ -170,26 +170,58 @@ $(document).ready(function () {
   // Submit Form
   $form.on('submit', function (e) {
     e.preventDefault();
-
     if (!checkFormValidity(true)) return;
+    if (submitting) return;
+    submitting = true;
 
-    const formData = {
-      reason: $reason.val(),
+    const inquiry = {
       name: $name.val().trim(),
       email: $email.val().trim(),
+      reason: $reason.val(),
       message: $message.val().trim(),
+      form: 'bjco-contact'
     };
 
     // Simulate email sending
-    console.log('Sending email:', formData);
+    console.log('Sending email:', inquiry);
+    sendMessage(inquiry);
 
     // Clear Local Storage and Form Fields After Submission
     localStorage.clear();
     $form.hide();
     $('#messageSent').show();
-    setTimeout(() => {
-      $('#messageSent').hide();
-      $form.trigger('reset').show();
-    }, 8000);
   });
 });
+
+function sendMessage(inquiry) {
+  $.ajax({
+    url: 'https://bjco-server-3d68e4a22d18.herokuapp.com/api/contact/mailer',
+    type: 'POST',
+    data: JSON.stringify(inquiry),
+    dataType: 'json',
+    contentType: 'application/json',
+    success: function(response) {
+      window.response = response;
+      $('#messageSent').show();
+
+      setTimeout(() => {
+        $('#messageSent').hide();
+        $form.trigger('reset').show();
+      }, 8000);
+
+      submitting = false;
+    },
+    error: function(xhr, status, error) {
+      console.log(xhr, status, error);
+      /* TODO: Create failure alert */
+      $('#messageSent').html(`<p>There was a problem sending your message. Please send us an email instead. You can reach us at hello@brownjuice.co</p>`).show();
+
+      // show field content
+      $submit.remove();
+      $form.slideDown();
+
+      // don't reset submitting flag
+      // submitting = true;
+    }
+  });
+}
