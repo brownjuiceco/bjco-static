@@ -186,46 +186,48 @@ $(document).ready(function () {
     sendMessage(inquiry);
     // console.log('Sending email:', inquiry);
   });
+
+  // delivery helper
+  function sendMessage(inquiry) {
+    $form.hide();
+
+    $.ajax({
+      url: 'https://bjco-server-3d68e4a22d18.herokuapp.com/api/contact/mailer',
+      type: 'POST',
+      data: JSON.stringify(inquiry),
+      dataType: 'json',
+      contentType: 'application/json',
+      success: function(response) {
+        window.response = response;
+        $('#messageSent').show();
+
+        setTimeout(() => {
+          $('#messageSent').hide();
+          $form.trigger('reset').show();
+        }, 8000);
+
+        localStorage.clear();
+        window.submitting = false;
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr, status, error);
+        /* TODO: Create failure alert */
+        var errorMessage = '';
+        if (window.location.hash.slice(1) === 'jp') {
+          errorMessage = `メッセージの送信中に問題が発生しました。代わりにメールをお送りください。<a href="mailto:hello@brownjuice.co">hello@brownjuice.co</a>までご連絡ください。`;
+        } else {
+          errorMessage = `There was a problem sending your message. Please send us an email instead. You can reach us at <a href="mailto:hello@brownjuice.co">hello@brownjuice.co</a>`;
+        }
+        $('#messageSent').html(`<p>${errorMessage}</p>`).show();
+
+        // show field content
+        $submit.remove();
+        $form.slideDown();
+
+        // don't reset submitting flag
+        // window.submitting = true;
+      }
+    });
+  }
 });
 
-function sendMessage(inquiry) {
-  $form.hide();
-
-  $.ajax({
-    url: 'https://bjco-server-3d68e4a22d18.herokuapp.com/api/contact/mailer',
-    type: 'POST',
-    data: JSON.stringify(inquiry),
-    dataType: 'json',
-    contentType: 'application/json',
-    success: function(response) {
-      window.response = response;
-      $('#messageSent').show();
-
-      setTimeout(() => {
-        $('#messageSent').hide();
-        $form.trigger('reset').show();
-      }, 8000);
-
-      localStorage.clear();
-      window.submitting = false;
-    },
-    error: function(xhr, status, error) {
-      console.log(xhr, status, error);
-      /* TODO: Create failure alert */
-      var errorMessage = '';
-      if (window.location.hash.slice(1) === 'jp') {
-        errorMessage = `メッセージの送信中に問題が発生しました。代わりにメールをお送りください。<a href="mailto:hello@brownjuice.co">hello@brownjuice.co</a>までご連絡ください。`;
-      } else {
-        errorMessage = `There was a problem sending your message. Please send us an email instead. You can reach us at <a href="mailto:hello@brownjuice.co">hello@brownjuice.co</a>`;
-      }
-      $('#messageSent').html(`<p>${errorMessage}</p>`).show();
-
-      // show field content
-      $submit.remove();
-      $form.slideDown();
-
-      // don't reset submitting flag
-      // window.submitting = true;
-    }
-  });
-}
