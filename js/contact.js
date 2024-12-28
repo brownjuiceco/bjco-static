@@ -184,7 +184,7 @@ function collectData() {
   const inquiry = {
     name: $('#name').val().trim(),
     email: $('#email').val().trim(),
-    reason: $('#reason').val(),
+    reason: $('#reason input[checked]').val(),
     message: $('#message').val().trim(),
     form: 'bjco-contact'
   };
