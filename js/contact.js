@@ -194,7 +194,7 @@ $(document).ready(function () {
     var message = $(`<div/>`);
 
     $.ajax({
-      url: 'https://cors-anywhere.herokuapp.com/https://bjco-server-3d68e4a22d18.herokuapp.com/api/contact/mailer',
+      url: 'https://bjco-server-3d68e4a22d18.herokuapp.com/api/contact/mailer',
       type: 'POST',
       data: JSON.stringify(inquiry),
       dataType: 'json',
@@ -205,19 +205,19 @@ $(document).ready(function () {
         // build message
         switch (language) {
           case `cn`: // chinese
-            message.append($(`<h3/>`).text(`您的消息已发送。`))
+            message.append($(`<h4/>`).text(`您的消息已发送。`))
               .append($(`<p/>`).text(`感谢您的来信！我们会尽快与您联系。 方便您的备份和查询，您会收到一封记录您留言内容的电子邮件。`))
               .append($(`<p/>`).text(`您可以通过直接回复此邮件，来跟进或提供其他信息。`));
             break;
 
           case `jp`: // japanese
-            message.append($(`<h3/>`).text(`メッセージは送信されました。`))
+            message.append($(`<h4/>`).text(`メッセージは送信されました。`))
               .append($(`<p/>`).text(`可能な限り早く返信いたします。すぐに確認メールが届きます。`))
               .append($(`<p/>`).text(`追加情報を提供したい場合は、確認メールに返信してください。`));
             break;
 
           default: // english
-            message.append($(`<h3/>`).text(`Message received`))
+            message.append($(`<h4/>`).text(`Message received`))
               .append($(`<p/>`).text(`We'll be in touch soon. You should receive a confirmation shortly.`))
               .append($(`<p/>`).text(`If you need to provide additional information, you can reply to the confirmation email.`));
             break;
@@ -238,19 +238,19 @@ $(document).ready(function () {
         // build message
         switch (language) {
           case `cn`: // chinese
-            message.append($(`<h3/>`).text(`出问题了，向您致歉`))
+            message.append($(`<h4/>`).text(`出问题了，向您致歉`))
               .append($(`<p/>`).text(`提交您的消息时出错。`))
               .append($(`<p/>`).html(`您可以尝试再次提交消息，或直接发送电子邮件至<a href="mailto:hello@brownjuice.co" target="_blank">hello@brownjuice.co</a>`));
             break;
 
           case `jp`: // japanese
-            message.append($(`<h3/>`).text(`メッセージの送信中に問題が発生しました。`))
+            message.append($(`<h4/>`).text(`メッセージの送信中に問題が発生しました。`))
               // .append($(`<p/>`).text(`There was an error submitting your message.`))
               .append($(`<p/>`).html(`代わりにメールをお送りください。<a href="mailto:hello@brownjuice.co">hello@brownjuice.co</a>までご連絡ください。`));
             break;
 
           default: // english
-            message.append($(`<h3/>`).text(`There was a problem sending your message. `))
+            message.append($(`<h4/>`).text(`There was a problem sending your message. `))
               // .append($(`<p/>`).text(`There was an error submitting your message.`))
               .append($(`<p/>`).html(`Please send us an email instead. You can reach us at <a href="mailto:hello@brownjuice.co">hello@brownjuice.co</a>`));
             break;
