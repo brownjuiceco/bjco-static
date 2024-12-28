@@ -203,6 +203,7 @@ function sendMessage(inquiry) {
     type: 'POST',
     data: JSON.stringify(inquiry),
     dataType: 'json',
+    origin: "brownjuice.co",
     contentType: 'application/json',
     success: function(response) {
       window.response = response;
