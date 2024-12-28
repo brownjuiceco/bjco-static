@@ -182,11 +182,11 @@ $(document).ready(function () {
 });
 function collectData() {
   const inquiry = {
-    name: $('#name').val().trim(),
-    email: $('#email').val().trim(),
-    reason: $('#reason input[checked]').val(),
-    message: $('#message').val().trim(),
-    form: 'bjco-contact'
+    "name": $('#name').val().trim(),
+    "email": $('#email').val().trim(),
+    "reason": $('#reason input[checked]').val(),
+    "message": $('#message').val().trim(),
+    "form": 'bjco-contact'
   };
 
   return inquiry;
