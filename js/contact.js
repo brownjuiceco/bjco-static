@@ -182,10 +182,10 @@ $(document).ready(function () {
 });
 function collectData() {
   const inquiry = {
-    name: $name.val().trim(),
-    email: $email.val().trim(),
-    reason: $reason.val(),
-    message: $message.val().trim(),
+    name: $('#name').val().trim(),
+    email: $('#email').val().trim(),
+    reason: $('#reason').val(),
+    message: $('#message').val().trim(),
     form: 'bjco-contact'
   };
 
