@@ -1,4 +1,5 @@
-# BJCo static site
+# BJCo static site for testing front-end changes
+Viewable at: https://brownjuiceco.github.io/brownjuiceco/
 
 ### To get started:
 * `git clone https://github.com/brownjuiceco/brownjuiceco.git`
